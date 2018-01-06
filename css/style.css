@@ -1,0 +1,56 @@
+/*
+Theme Name:     Newsmag Child theme
+Theme URI: 		http://themeforest.net/user/tagDiv/portfolio
+Description:    Child theme made by tagDiv
+Author:         tagDiv
+Author URI: 	http://themeforest.net/user/tagDiv/portfolio
+Template:       Newsmag                             
+Version:        3.3c
+*/
+
+
+/*  ----------------------------------------------------------------------------
+    This file will load automatically when the child theme is active. You can use it
+    for custom CSS.
+*/
+/*Generales*/
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*HOME*/
+/*sidebar*/
+#qpc-tw-feed {
+    overflow: auto;
+    border: 1px solid #e6e6e6;
+}
+#qpc-home-main > .td-pb-span4 li {
+    list-style-type: none;
+}
+#qpc-home-main > .td-pb-span4 .block-title {
+    display: block;
+    background: #235279;
+    margin: 30px 0 0;
+    
+}
+#qpc-home-main > .td-pb-span4 .block-title span {
+    background: transparent;
+    padding: 15px 15px 8px;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+/*Footer*/
+.footer-text-wrap {
+    font-size: 20px;
+    line-height: 1.2;
+
+}
+/*RESPONSIVE*/
+@media screen and (max-width: 768px){
+    #qpc-tw-feed {
+        max-height: 500px!important;
+        margin: 0 30px;
+        
+    }
+}
