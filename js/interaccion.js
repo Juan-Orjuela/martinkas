@@ -291,7 +291,7 @@ $(document).ready(function () {
 			offset: '-=7000'
 		})
 		.add({
-			targets: ['#sec-1 h2, #sec-1 .texto'],
+			targets: '#sec-1 h2',
 			translateY: {
 				value: [60, 0],
 				duration: 800
@@ -301,11 +301,7 @@ $(document).ready(function () {
 				duration: 1200
 			},
 			easing: 'linear',
-			delay: function (el, i) {
-				//console.log(i + "es el el: " + el + "lenght es: " + l );
-				return i * 500;
-			},
-			offset: '-=6000'
+			offset: '-=5500'
 		})
 		.add({
 			targets: ['#sec-1 .sombra, #sec-1 .flecha .rojo, #sec-1 .texto i'],
@@ -317,6 +313,15 @@ $(document).ready(function () {
 				return (i * 200);
 			},
 			offset: '-=5000'
+		})
+		.add({
+			targets: '#sec-1 .bajarIntro .texto',
+			color: {
+				value: ['rgba(230,230,230,0)', 'rgba(230,230,230,1)'],
+				duration: 1200
+			},
+			easing: 'linear',
+			offset: '-=4000'
 		})
 		.add({
 			targets: '#sec-1 .txt-lineas span',

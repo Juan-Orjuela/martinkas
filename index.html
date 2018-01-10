@@ -382,20 +382,20 @@
 							<h2><span>...tus productos<i class="sombra"></i></span> <br><span>se venden.<i class="sombra"></i></span></h2>
 						<div class="txt"><span class="linea"></span><p>Todos los campos son requeridos.</p></div>
 						</div>
-						<form id="form-contacto" novalidate>
+						<form id="form-contacto" role="form" method="post" action="contact.php" novalidate>
 					  	<div class="form-group">
-							<input type="text" class="form-control" id="nombre" placeholder="Tu nombre:" required>
+							<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre:" required>
 							<div class="invalid-feedback">No olvides escribir tu nombre.</div>
 						  </div>
 						  <div class="form-group">
-							<input type="email" class="form-control" id="correo" placeholder="Tu correo:" required>
+							<input type="email" class="form-control" id="correo" name="correo" placeholder="Tu correo:" required>
 							<div class="invalid-feedback">Utiliza un correo válido.</div>
 						  </div>
 						  <div class="form-group">
-							<textarea class="form-control" id="mensaje" rows="3" placeholder="Tu mensaje:" required></textarea>
+							<textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Tu mensaje:" required></textarea>
 							<div class="invalid-feedback">No olvides escribir tu mensaje.</div>
 						  </div>
-						  <div class="text-center"><button class="btn btn-primary" type="submit">Contáctanos</button><div class="btn-sombra"></div></div>
+						  <div class="text-center"><input id="submit" name="submit" class="btn btn-primary" type="submit" value="Contáctanos"><div class="btn-sombra"></div></div>
 						  
 						</form>
 					</div>
