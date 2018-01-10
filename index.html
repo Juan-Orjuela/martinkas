@@ -408,6 +408,7 @@
 				</div>
 			</div>
 			</div>
+			<a class="creditos" href="#" data-trigger="focus" data-placement="top" data-toggle="popover" data-html="true" data-content="Diseño y desarrollo: <a href='http://www.appicua.com' target='_blank'>Appicua</a><br>Visualización y animación 3D: <a href='http://www.nisba-nisba.com' target='_blank'>Nisba Visual Label</a><br>Diseño sonoro: <a href='https://audiobitstudios.com/' target='_blank'>Audiobit Studios</a>">Créditos</a>
 		</section>
 	</div>
     <!-- Optional JavaScript -->
@@ -438,6 +439,9 @@
 		}, false);
 	  }, false);
 	})();
+	$(function () {
+		$('[data-toggle="popover"]').popover()
+	})
 	</script>
 	
   </body>

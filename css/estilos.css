@@ -915,6 +915,63 @@ SLIDE 9
 #sec-9 .container {
 	z-index: 2;
 }
+#sec-9 .creditos {
+	position: absolute;
+	bottom: -3px;
+	right: 10px;
+	font-size: 0.7rem;
+	background-color: #e20613;
+	padding: 1px 12px 4px;
+	border-radius: 4px 4px 0 0;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 700;
+	transition: bottom 200ms ease;
+	z-index: 3;
+}
+#sec-9 .creditos:hover {
+	text-decoration: none;
+	bottom: 0; 
+}
+.popover {
+	background: #222 url("../img/dark_wall.png");
+	border: 1px solid #333;
+	border-radius: 0;
+	min-width: 290px;
+}
+.popover-body {
+	color: #e6e6e6;
+	font-size: 0.7rem;
+	
+	padding: 0.5rem 0.9rem;
+}
+.popover-body a{
+	color: #e6e6e6;
+	border-bottom: 1px solid #333;
+	transition: all 700ms;
+}
+.popover-body a:hover, .popover-body a:focus {
+	text-decoration: none;
+	color: #fff;
+	border-bottom: 1px solid #e20613;
+}
+.popover.bs-popover-auto[x-placement^=top] .arrow::after, .popover.bs-popover-top .arrow::after {
+    bottom: -1.05rem;
+    margin-left: -0.2rem;
+    border-top-color: #333;
+    border-width: .4rem;
+}
+.popover .arrow:before {
+	display: none;
+}
+.popover .arrow {
+    position: absolute;
+    display: block;
+    width: .8rem;
+    height: .4rem;
+
+}
 .desvanecer {
 	animation: desvanecer 1000ms forwards;
 }
@@ -926,6 +983,7 @@ SLIDE 9
 		opacity: 0;
 	}
 }
+
 /*
 =====================
 RESPONSIVE
