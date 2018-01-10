@@ -6,7 +6,6 @@
 		$from = 'Sitio web Martinkas'; 
 		$to = 'info@martinkas.com'; 
 		$subject = 'Mensaje desde el sitio web';
-		
 		$body = "De: $name\n E-Mail: $email\n Mensaje:\n $message";
  
  
