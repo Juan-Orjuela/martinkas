@@ -452,10 +452,6 @@ SLIDE 1
 SLIDE 2
 ========
 */
-#sec-2 {
-	/* background: url(../img/prueba-fondo-s2.png) no-repeat; */
-	/* background-size: cover; */
-}
 #sec-2 img {
 	position:relative;
 	right: -30px;
