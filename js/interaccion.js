@@ -143,9 +143,9 @@ $(document).ready(function () {
 		animacion.play();
 	} //Fin animar Slide
 	function desvanecer(){
-		$('#videoFinal').addClass('desvanecer');
+		$('.videoFinal').addClass('desvanecer');
 		setTimeout(function () {
-			$("#videoFinal").remove();
+			$(".videoFinal").remove();
 		}, 1200);
 	}
 	//Cargando
@@ -257,6 +257,10 @@ $(document).ready(function () {
 	//Animación inicial
 
 	intro.add({
+			targets: '#sec-1 #videoIntro',
+			opacity: 0,
+			duration: 300
+		}).add({
 			targets: '#sec-1 .container',
 			height: [0, '100%'],
 			duration: 1100,
@@ -301,7 +305,7 @@ $(document).ready(function () {
 				duration: 1200
 			},
 			easing: 'linear',
-			offset: '-=5500'
+			offset: '-=6500'
 		})
 		.add({
 			targets: ['#sec-1 .sombra, #sec-1 .flecha .rojo, #sec-1 .texto i'],
@@ -312,7 +316,7 @@ $(document).ready(function () {
 				//console.log(i + "es el el: " + el + "lenght es: " + l);
 				return (i * 200);
 			},
-			offset: '-=5000'
+			offset: '-=6000'
 		})
 		.add({
 			targets: '#sec-1 .bajarIntro .texto',
@@ -321,7 +325,7 @@ $(document).ready(function () {
 				duration: 1200
 			},
 			easing: 'linear',
-			offset: '-=4000'
+			offset: '-=5000'
 		})
 		.add({
 			targets: '#sec-1 .txt-lineas span',
@@ -329,7 +333,7 @@ $(document).ready(function () {
 			delay: function (el, i) {
 				return (i * 100);
 			},
-			offset: '-=4000'
+			offset: '-=5000'
 		})
 		.add({
 			targets: '#sec-1 .txt-lineas span i',
@@ -337,13 +341,13 @@ $(document).ready(function () {
 			delay: function (el, i) {
 				return (i * 100);
 			},
-			offset: '-=3000'
+			offset: '-=4000'
 		})
 		.add({
 			targets: '#sec-1 .flecha .rojo .i',
 			top: [-32, 0],
 			duration: 600,
 			easing: 'linear',
-			offset: '-=3000'
+			offset: '-=4000'
 		});
 }); // Final

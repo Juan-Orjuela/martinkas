@@ -351,6 +351,8 @@ SLIDE 1
 */
 #sec-1 {
 	overflow: hidden;
+	background: url('../img/video_ultimo_frame.jpg') center;
+	background-size: cover;
 }
 #videoIntro,
 #videoFinal{
@@ -362,12 +364,29 @@ SLIDE 1
 		height: 100%;
 		background-size: 100% 100%;
  		background-color: black; /* in case the video doesn't fit the whole page*/
-  		background-image: url('../img/r-prueba-1.png');
   		background-position: center center;
-  		background-size: contain;
+		background-size: contain;
+		background-repeat: no-repeat;
    		object-fit: cover; /*cover video background */
-   		z-index:3;
+   		z-index:4;
 }
+#videoIntro {
+	background-image: url('../img/video_ultimo_frame.jpg');
+}
+#videoFinal {
+	background-image: url('../img/r-prueba-4.png');
+}
+.videoFinal {
+	position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		background: url("../img/dark_wall.png") repeat;
+		z-index: 3
+}
+
 #sec-1 .container {
 	z-index: 4;
 	top: 0
@@ -1753,5 +1772,40 @@ RESPONSIVE
 	}
 	#sec-9 .txt {
 		margin-bottom: 2vh;
+	}
+}
+@media screen and (orientation: portrait) {
+	#sec-1 {
+		background: url("../img/dark_wall.png") repeat;
+	}
+	#videoIntro {
+		opacity: 1!important;
+		position: absolute;
+		left: -35%;
+		right: initial;
+		bottom: 0;
+		top:0;
+		width: 180%;
+		height: auto;
+   		object-fit: initial; /*cover video background */
+   		transform: translateY(40%);
+   		z-index:3;
+
+   		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+ 		background-image: none;
+  		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	#videoFinal {
+		width: 180%;
+		height: auto;
+		transform: translateY(40%);
+		left: -38%;
+		object-fit: initial; /*cover video background */
+	}
+	#sec-1 .textos {
+    	margin-bottom: 5vh;
 	}
 }
