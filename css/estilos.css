@@ -631,6 +631,10 @@ SLIDE 5
 }
 #sec-5 .textos {
 	margin-top: 360px;
+	
+}
+#sec-5 .textos h3 {
+	z-index: 1001;
 }
 /*
 ========
@@ -1106,7 +1110,7 @@ RESPONSIVE
 		right: 0
 	}
 	#sec-2 .textos {
-		margin-top: -38vh;
+		margin-top: -45vh;
 	}
 	
 	#sec-2 .txt-puntos {
@@ -1133,16 +1137,16 @@ RESPONSIVE
 		width: 100%;
 	}
 	#sec-3 .render {
-		margin-top: 8vh;
+		margin-top: 5vh;
 	}
 	#sec-3 .textos {
-		margin-top: -30vh;
+		margin-top: -36vh;
 	}
 	#sec-4 .render {
 		margin-top: 8vh;
 	}
 	#sec-4 .textos {
-		margin-top: -30vh;
+		margin-top: -35vh;
 	}
 	#sec-4 .txt-puntos{
 		right: 15px;
@@ -1162,15 +1166,15 @@ RESPONSIVE
 	}
 	#sec-6 .render {
 		margin-top: 40px;
-		margin-top: 8vh;
+		margin-top: 6vh;
 	}
 	#sec-6 .textos {
 		margin-top: -160px;
-		margin-top: -19vh;
+		margin-top: -25vh;
 	}
 	#sec-6 .txt-lineas {
     	left: 15px;
-    	top: 50%;
+    	top: 45%;
 	}
 	#sec-6 .txt-puntos {
 		display: none;
@@ -1184,7 +1188,7 @@ RESPONSIVE
 	}
 	#sec-7 .textos {
 		margin-top: -260px;
-		margin-top: -30vh;
+		margin-top: -34vh;
 	}
 	#sec-7 .txt-puntos {
 		display: none;
@@ -1203,6 +1207,18 @@ RESPONSIVE
 	}
 	#sec-9 .txt-puntos {
 		display: none;
+	}
+	.popover {
+		right: 10px!important;
+		left: initial!important;
+		min-width: 255px;
+		transform: none!important;
+		top: initial!important;
+		bottom: 20px!important;
+	}
+	.popover .arrow {
+		left: initial!important;
+		right: 28px!important;
 	}
 }
 @media screen and (max-width: 575px) and (orientation: portrait) {
@@ -1270,13 +1286,16 @@ RESPONSIVE
 		margin: 3.5vh 0 0 60px;
 	}
 	/*Secciones*/
+	#sec-1 h2 {
+		font-size: 38px;
+	}
 	#sec-2 .txt-puntos {
 		height: 40px!important;
 		overflow: hidden;
 		bottom:-8px;
 	}
 	#sec-3 .txt-lineas {
-		top: 40%;
+		top: 36%;
 	}
 	#sec-4 .txt-puntos {
 		width: 100px!important;
@@ -1292,8 +1311,24 @@ RESPONSIVE
 	#sec-7 .tool p::after {
 		top: 10px;
 	}
+	#sec-7 .tool-2 p {
+		margin: 0 0;
+    	padding: 0 24px 0 0;
+    	right: -2px;
+	}
+	#sec-7 .tool-2 p:after {
+		left: initial;
+		right: 0;
+	}
 	#sec-8 .txt-lineas {
 		display: none
+	}
+	.fila-carrusel {
+		 min-height: 76px;
+	}
+	#sec-8 .tit-1 {
+		
+		margin-top: 5vh;
 	}
 	#sec-9 .footer p {
 		margin-bottom: 4px;
@@ -1458,6 +1493,7 @@ RESPONSIVE
 	#sec-9 .footer {
 		min-height: 9vh;
 	}
+	
 }
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.section .container.bg-full {
@@ -1701,5 +1737,21 @@ RESPONSIVE
 		-ms-flex: 0 0 28%;
 		flex: 0 0 30%;
 		max-width: 30%;
+	}
+}
+@media screen and (max-height: 580px) and (orientation: portrait) {
+	#form-contacto .form-group {
+    	padding-bottom: 15px;
+    	margin-bottom: 6px;
+	}
+	#sec-9 h2 {
+    	margin-top: -2vh;
+    	margin-bottom: 4vh;
+	}
+	#form-contacto .btn {
+    	margin-top: 1vh;
+	}
+	#sec-9 .txt {
+		margin-bottom: 2vh;
 	}
 }
