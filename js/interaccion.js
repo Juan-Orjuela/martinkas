@@ -2,30 +2,43 @@
 $(document).ready(function () {
 	//Declarar variables
 	var intro = anime.timeline({
-			loop: false,
-			autoplay: false
-		}),
+		loop: false,
+		autoplay: false
+	}),
 		inicio = 0,
 		final = 0,
 		scrollado = 0,
 		videoIntro = document.getElementById("videoIntro"),
 		videoFinal = document.getElementById("videoFinal");
 
-
+	// Controlar video
+	$('#btn-play').on('click', function (e) {
+		e.preventDefault();
+		videoIntro.play();
+		desvanecer('#btn-play', 2000);
+		setTimeout(function () {
+			aparecer('#btn-skip');
+		}, 5000);
+		videoIntro.play();
+	});
+	$('#btn-skip').on('click', function (e) {
+		e.preventDefault();
+		videoIntro.currentTime = 21.9;
+	});
 	//Function para animar cada slide
 	function animarSlide(slide, estado) {
 		var animacion = anime.timeline({
 			loop: false,
 			autoplay: false
-	});
+		});
 
 		animacion.add({
-				targets: '#sec-' + slide + ' .txt-head i',
-				width: [0, '100%'],
-				delay: function (el, i) {
-					return (i * 100);
-				}
-			})
+			targets: '#sec-' + slide + ' .txt-head i',
+			width: [0, '100%'],
+			delay: function (el, i) {
+				return (i * 100);
+			}
+		})
 			.add({
 				targets: ['#sec-' + slide + ' .mk-img', '#sec-' + slide + ' h3', '#sec-' + slide + ' h2', '#sec-' + slide + ' .txt'],
 				translateY: {
@@ -82,21 +95,21 @@ $(document).ready(function () {
 
 		animacion.play();
 	} //Fin animar Slide
-	
+
 	//Function para animar slide 9
 	function animarSlide9() {
 		var animacion = anime.timeline({
 			loop: false,
 			autoplay: false
-	});
+		});
 
 		animacion.add({
-				targets: '#sec-9 .txt-head i',
-				width: [0, '100%'],
-				delay: function (el, i) {
-					return (i * 100);
-				}
-			})
+			targets: '#sec-9 .txt-head i',
+			width: [0, '100%'],
+			delay: function (el, i) {
+				return (i * 100);
+			}
+		})
 			.add({
 				targets: ['#sec-9 h2', '#sec-9 .txt'],
 				translateY: {
@@ -142,11 +155,14 @@ $(document).ready(function () {
 
 		animacion.play();
 	} //Fin animar Slide
-	function desvanecer(){
-		$('.videoFinal').addClass('desvanecer');
+	function desvanecer(el, dur) {
+		$(el).addClass('desvanecer');
 		setTimeout(function () {
-			$(".videoFinal").remove();
-		}, 1200);
+			$(el).remove();
+		}, dur);
+	}
+	function aparecer(el) {
+		$(el).addClass('aparecer');
 	}
 	//Cargando
 	setTimeout(function () {
@@ -161,29 +177,39 @@ $(document).ready(function () {
 		menu: '#menu',
 		scrollingSpeed: 1000,
 		afterLoad: function (anchorLink, index) {
-			
+
 			if (inicio === 0 && index === 1) {
 				videoIntro.play();
+				setTimeout(function () {
+					if (videoIntro.paused) {
+						aparecer('#btn-play');
+					} else {
+						setTimeout(function () {
+							aparecer('#btn-skip');
+						}, 5000);
+					}
+				}, 2000);
 				videoIntro.onended = function () {
 					intro.play();
+					desvanecer('#btn-skip', 500);
 					inicio++;
 				};
 			} else if (final === 0 && index === 9) {
 				videoFinal.play();
 				videoFinal.onended = function () {
 					animarSlide9();
-					desvanecer();
+					desvanecer('.videoFinal', 1200);
 					final++;
 				};
-			} else if (index === 9){
+			} else if (index === 9) {
 				animarSlide9();
 			} else if (index !== 1 && index !== 9) {
 				animarSlide(index);
 			} else {
 				console.log("Algo malo está pasando");
 			}
-			
-			if (scrollado === 0){
+
+			if (scrollado === 0) {
 				$('#logo').css('opacity', 1);
 				$('#menu li').css('opacity', 1);
 				$('#menu i').css('height', '120%');
@@ -257,15 +283,15 @@ $(document).ready(function () {
 	//Animación inicial
 
 	intro.add({
-			targets: '#sec-1 #videoIntro',
-			opacity: 0,
-			duration: 300
-		}).add({
-			targets: '#sec-1 .container',
-			height: [0, '100%'],
-			duration: 1100,
-			easing: 'easeOutQuad'
-		})
+		targets: '#sec-1 #videoIntro',
+		opacity: 0,
+		duration: 300
+	}).add({
+		targets: '#sec-1 .container',
+		height: [0, '100%'],
+		duration: 1100,
+		easing: 'easeOutQuad'
+	})
 		.add({
 			targets: '#menu i',
 			height: [0, '120%'],

@@ -368,10 +368,11 @@ SLIDE 1
 		background-size: contain;
 		background-repeat: no-repeat;
    		object-fit: cover; /*cover video background */
-   		z-index:4;
+   		
 }
 #videoIntro {
 	background-image: url('../img/video_ultimo_frame.jpg');
+	z-index:6;
 }
 #videoFinal {
 	background-image: url('../img/r-prueba-4.png');
@@ -386,9 +387,36 @@ SLIDE 1
 		background: url("../img/dark_wall.png") repeat;
 		z-index: 3
 }
-
+#btn-play, #btn-skip {
+	opacity: 0;
+	position: absolute;
+	z-index: 7;
+	color: #e6e6e6;
+}
+#btn-play span, #btn-skip span{
+	color: #e6e6e6;
+	font-family: "ff-meta-serif-web-pro",serif;
+	display: block;
+}
+#btn-play span {
+	margin-top: 8px;
+}
+#btn-play:hover, #btn-play:focus,
+#btn-skip:hover, #btn-skip:focus {
+	text-decoration: none;
+}
+#btn-play {
+	top: 50%;
+	left: 50%;
+	margin-left: -20px;
+	margin-top: -20px 
+}
+#btn-skip {
+	right: 10px;
+	bottom: 10px;
+}
 #sec-1 .container {
-	z-index: 4;
+	z-index: 7;
 	top: 0
 }
 #sec-1 .fp-tableCell {
@@ -991,8 +1019,35 @@ SLIDE 9
     height: .4rem;
 
 }
+.aparecer {
+	animation: aparecer 1000ms forwards;
+}
 .desvanecer {
 	animation: desvanecer 1000ms forwards;
+}
+@-webkit-keyframes desvanecer {
+	from {
+		opacity: 1
+	}
+	to {
+		opacity: 0;
+	}
+}
+@-moz-keyframes desvanecer {
+	from {
+		opacity: 1
+	}
+	to {
+		opacity: 0;
+	}
+}
+@-o-keyframes desvanecer {
+	from {
+		opacity: 1
+	}
+	to {
+		opacity: 0;
+	}
 }
 @keyframes desvanecer {
 	from {
@@ -1002,7 +1057,38 @@ SLIDE 9
 		opacity: 0;
 	}
 }
-
+@-webkit-keyframes aparecer {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-moz-keyframes aparecer {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-o-keyframes aparecer {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes aparecer {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1;
+	}
+}
 /*
 =====================
 RESPONSIVE
@@ -1777,20 +1863,22 @@ RESPONSIVE
 @media screen and (orientation: portrait) {
 	#sec-1 {
 		background: url("../img/dark_wall.png") repeat;
+		background: #000;
 	}
 	#videoIntro {
 		opacity: 1!important;
 		position: absolute;
 		left: -35%;
 		right: initial;
-		bottom: 0;
-		top:0;
+		bottom: initial;
+		top: 50%;
 		width: 180%;
 		height: auto;
    		object-fit: initial; /*cover video background */
-   		transform: translateY(40%);
-   		z-index:3;
-
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index:3;
    		background-size: 100% 100%;
  		background-color: black; /* in case the video doesn't fit the whole page*/
  		background-image: none;
