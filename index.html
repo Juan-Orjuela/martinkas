@@ -6,8 +6,11 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#161616">
 	<!-- Bootstrap CSS -->
+	<script src="js/pace.min.js"></script>
+	<link href="css/carga.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://use.typekit.net/tzu3dya.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
 	 crossorigin="anonymous">
@@ -17,8 +20,8 @@
 	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
 	<link rel="stylesheet" href="css/estilos.css">
-	<script src="js/pace.min.js"></script>
-	<link href="css/pace.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
@@ -88,8 +91,14 @@
 	<div id="fullpage">
 		<!--Sección 1-->
 		<section class="section" id="sec-1">
-			<a id="btn-play" class="text-center" href="#"><img src="img/play-btn.png" srcset="img/play-btn@2x.png 2x" alt="Reproducir video"><span>Inicia<span></a>
-			<a id="btn-skip" href="#"><span>Saltar</span></a>
+			<a id="btn-play" class="text-center" href="#">
+				<img src="img/play-btn.png" srcset="img/play-btn@2x.png 2x" alt="Reproducir video">
+				<span>Inicia
+					<span>
+			</a>
+			<a id="btn-skip" href="#">
+				<span>Saltar</span>
+			</a>
 			<video id="videoIntro" preload="auto">
 				<source src="video/video_intro_martinkas.mp4" type="video/mp4">
 				<source src="video/video_intro_martinkas.webm" type="video/webm">
@@ -790,6 +799,7 @@
 		$(function () {
 			$('[data-toggle="popover"]').popover()
 		})
+
 	</script>
 
 </body>

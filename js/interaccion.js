@@ -196,6 +196,13 @@ $(document).ready(function () {
 				};
 			} else if (final === 0 && index === 9) {
 				videoFinal.play();
+				setTimeout(function () {
+					if (videoFinal.paused && final === 0) {
+						animarSlide9();
+						desvanecer('.videoFinal', 1200);
+						final++;
+					} 
+				}, 500);
 				videoFinal.onended = function () {
 					animarSlide9();
 					desvanecer('.videoFinal', 1200);
@@ -225,6 +232,7 @@ $(document).ready(function () {
 	});
 	$('body').on('swipedown', function (e) {
 		$.fn.fullpage.moveSectionUp();
+		document.documentElement.requestFullscreen();
 	});
 
 	//Carrusel 	

@@ -1,0 +1,100 @@
+/*Personalizados*/
+/* This is a compiled file, you should be editing the file in the templates directory */
+#cargando img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    max-width: 80%;
+    height: auto;
+  }
+   @media (max-width: 768px) {
+    #cargando img {
+      width: 300px;
+      left: calc(50% - 150px);
+      top: calc(50% - 50px);
+      -webkit-transform: none;
+      -moz-transform: none;
+      transform: none;
+    }
+  }
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    z-index: 2000;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    overflow: hidden;
+  }
+  
+  .pace .pace-progress {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  
+    max-width: 200px;
+    position: fixed;
+    z-index: 2000;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background: #e20613;
+    transition: width 100ms;
+  }
+  
+  .pace.pace-inactive {
+    display: none;
+  }
+.pace {
+    width: initial;
+    border: 0;
+    background: #333;
+    top:0;
+    bottom: initial
+  }
+  .pace .pace-progress {
+    max-width: 100%;
+  }
+  #cargando {
+    position: fixed;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background: #161616;
+    z-index: 1999;
+    opacity: 1;
+    transition: opacity 1000ms 1500ms;
+    opacity: 1;
+  }
+  
+  .pace-done #cargando img {
+    opacity: 0;
+    transition: opacity 1000ms 500ms;
+  }
+  .pace-done #cargando {
+    opacity: 0;
+  }
+ 
