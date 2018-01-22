@@ -1910,9 +1910,11 @@ RESPONSIVE
 	transition: margin-top 1000ms;
 }
 /*Móviles con teclado desplegado*/
-@media screen and (max-width: 768px) and (max-height: 520px) {
+@media screen and (max-width: 768px) and (max-height: 400px) {
+	
 	.form-activo #logo img {
 		max-width: 160px;
+		opacity: 0;
 	}
 	.form-activo #logo {
 		top: 3.5vh
@@ -1920,21 +1922,16 @@ RESPONSIVE
 	.form-activo #sec-9 h2 + .txt p {
 		padding: 0;
 	}
-	body, html {
+	body.form-activo {
 		font-size: 14px;
 	}
 	.form-activo #sec-9 h2 {
 		font-size: 32px!important;
 	}
-	.form-activo #sec-9 {
+	.form-activo #sec-9,
+	.form-activo #sec-9 .container {
 		display: block;
-		
-	}
-	.form-activo #sec-9 .textos {
-		display: none;
-	}
-	.form-activo #sec-9 form {
-		margin-top: 15vh;
+		height: 100vh!important;
 	}
 	.form-activo #sec-9 .fp-tableCell {
 		max-height: 100vh!important;
@@ -1942,7 +1939,7 @@ RESPONSIVE
 		overflow: auto;
 	}
 	.form-activo #sec-9 .container {
-		min-height: 520px;
+		min-height: 480px;
 	}
 	.form-activo #sec-9 .col-lg-6 .textos,
 	.form-activo #sec-9 .col-lg-6 #form-contacto {
@@ -1972,6 +1969,13 @@ RESPONSIVE
     	-ms-flex-align: start!important;
     	align-items: start!important;
 	}
+	.form-activo #sec-9 .footer > div {
+		margin-left: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	
 }
 
 
