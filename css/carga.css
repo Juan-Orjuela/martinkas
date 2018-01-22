@@ -1,5 +1,37 @@
 /*Personalizados*/
 /* This is a compiled file, you should be editing the file in the templates directory */
+@-webkit-keyframes entralogo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes entralogo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes entralogo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes entralogo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 #cargando img {
     position: absolute;
     left: 50%;
@@ -7,20 +39,24 @@
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    opacity: 1;
     max-width: 80%;
     height: auto;
-  }
-   @media (max-width: 768px) {
+    opacity: 0;
+    -webkit-animation: entralogo 1000ms 1000ms forwards;
+    -moz-animation: entralogo 1000ms 1000ms forwards;
+    -o-animation: entralogo 1000ms 1000ms forwards;
+    animation: entralogo 1000ms 1000ms forwards;
+}
+@media (max-width: 768px) {
     #cargando img {
-      width: 300px;
-      left: calc(50% - 150px);
-      top: calc(50% - 50px);
-      -webkit-transform: none;
-      -moz-transform: none;
-      transform: none;
+        width: 300px;
+        left: calc(50% - 150px);
+        top: calc(50% - 50px);
+        -webkit-transform: none;
+        -moz-transform: none;
+        transform: none;
     }
-  }
+}
 .pace {
     -webkit-pointer-events: none;
     pointer-events: none;
@@ -36,21 +72,23 @@
     bottom: 0;
     height: 5px;
     overflow: hidden;
-  }
-  
-  .pace .pace-progress {
+    opacity: 0;
+    -webkit-animation: entralogo 1000ms 1000ms forwards;
+    -moz-animation: entralogo 1000ms 1000ms forwards;
+    -o-animation: entralogo 1000ms 1000ms forwards;
+    animation: entralogo 1000ms 1000ms forwards;
+}
+.pace .pace-progress {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-  
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-  
     max-width: 200px;
     position: fixed;
     z-index: 2000;
@@ -61,40 +99,28 @@
     height: 100%;
     width: 100%;
     background: #e20613;
-    transition: width 100ms;
-  }
-  
-  .pace.pace-inactive {
-    display: none;
-  }
+    -webkit-transition: width 500ms 2000ms;
+    -moz-transition: width 500ms 2000ms;
+    transition: width 500ms 2000ms;
+}
 .pace {
-    width: initial;
+    width: 80%;
+    max-width: 400px;
     border: 0;
     background: #333;
-    top:0;
+    top: 55%;
     bottom: initial
-  }
-  .pace .pace-progress {
+}
+.pace .pace-progress {
     max-width: 100%;
-  }
-  #cargando {
+}
+#cargando {
     position: fixed;
-    top:0;
-    bottom:0;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     background: #161616;
     z-index: 1999;
-    opacity: 1;
-    transition: opacity 1000ms 1500ms;
-    opacity: 1;
-  }
-  
-  .pace-done #cargando img {
-    opacity: 0;
-    transition: opacity 1000ms 500ms;
-  }
-  .pace-done #cargando {
-    opacity: 0;
-  }
- 
+}
+

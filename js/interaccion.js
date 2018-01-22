@@ -11,6 +11,10 @@ $(document).ready(function () {
 		videoIntro = document.getElementById("videoIntro"),
 		videoFinal = document.getElementById("videoFinal");
 
+	//Cargando
+	setTimeout(function () {
+		desvanecer('#cargando, .pace-inactive', 2000);
+	}, 3000);
 	// Controlar video
 	$('#btn-play').on('click', function (e) {
 		e.preventDefault();
@@ -164,20 +168,15 @@ $(document).ready(function () {
 	function aparecer(el) {
 		$(el).addClass('aparecer');
 	}
-	//Cargando
-	setTimeout(function () {
-		$("#cargando").remove();
-	}, 3000);
 
 	//Fullpage ========
-
 	$('#fullpage').fullpage({
 		///sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
 		anchors: ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9'],
 		menu: '#menu',
 		scrollingSpeed: 1000,
+		scrollOverflow: true,
 		afterLoad: function (anchorLink, index) {
-
 			if (inicio === 0 && index === 1) {
 				videoIntro.play();
 				setTimeout(function () {
@@ -201,7 +200,7 @@ $(document).ready(function () {
 						animarSlide9();
 						desvanecer('.videoFinal', 1200);
 						final++;
-					} 
+					}
 				}, 500);
 				videoFinal.onended = function () {
 					animarSlide9();
@@ -232,7 +231,6 @@ $(document).ready(function () {
 	});
 	$('body').on('swipedown', function (e) {
 		$.fn.fullpage.moveSectionUp();
-		document.documentElement.requestFullscreen();
 	});
 
 	//Carrusel 	
@@ -384,4 +382,13 @@ $(document).ready(function () {
 			easing: 'linear',
 			offset: '-=4000'
 		});
+	$('#sec-9 form').on('focusin', function () {
+		$('body').addClass('form-activo');
+		$.fn.fullpage.setAllowScrolling(false, 'up');
+		console.log('Input tocado');
+	});
+	$('#sec-9 form').on('focusout', function () {
+		$('body').removeClass('form-activo');
+		console.log('Form sin focus');
+	});
 }); // Final

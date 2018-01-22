@@ -1314,6 +1314,9 @@ RESPONSIVE
 	#sec-9 .txt-puntos {
 		display: none;
 	}
+	#sec-9 h2 + .txt p {
+		padding: 0;
+	}
 	.popover {
 		right: 10px!important;
 		left: initial!important;
@@ -1439,6 +1442,7 @@ RESPONSIVE
 	#sec-9 .footer p {
 		margin-bottom: 4px;
 	}
+	
 }
 /*HORIZONTAL*/
 @media screen and (max-width: 992px) and (orientation: landscape) {
@@ -1902,3 +1906,73 @@ RESPONSIVE
     	margin-bottom: 5vh;
 	}
 }
+#sec-9 form {
+	transition: margin-top 1000ms;
+}
+/*Móviles con teclado desplegado*/
+@media screen and (max-width: 768px) and (max-height: 520px) {
+	.form-activo #logo img {
+		max-width: 160px;
+	}
+	.form-activo #logo {
+		top: 3.5vh
+	}
+	.form-activo #sec-9 h2 + .txt p {
+		padding: 0;
+	}
+	body, html {
+		font-size: 14px;
+	}
+	.form-activo #sec-9 h2 {
+		font-size: 32px!important;
+	}
+	.form-activo #sec-9 {
+		display: block;
+		
+	}
+	.form-activo #sec-9 .textos {
+		display: none;
+	}
+	.form-activo #sec-9 form {
+		margin-top: 15vh;
+	}
+	.form-activo #sec-9 .fp-tableCell {
+		max-height: 100vh!important;
+		display: block;
+		overflow: auto;
+	}
+	.form-activo #sec-9 .container {
+		min-height: 520px;
+	}
+	.form-activo #sec-9 .col-lg-6 .textos,
+	.form-activo #sec-9 .col-lg-6 #form-contacto {
+    	margin-left: 0;
+    	width: 100%;
+    	float: initial;
+	}
+	.form-activo #form-contacto .form-group {
+    	padding-bottom: 15px;
+    	margin-bottom: 6px;
+	}
+	.form-activo #form-contacto .form-group {
+    	padding-bottom: 15px;
+    	margin-bottom: 6px;
+	}
+	.form-activo #sec-9 h2 {
+    	margin-top: -2vh;
+    	margin-bottom: 4vh;
+	}
+	.form-activo #form-contacto .btn {
+    	margin-top: 1vh;
+	}
+	.form-activo #sec-9 .txt {
+		margin-bottom: 2vh;
+	}
+	.form-activo #sec-9 .align-items-center {
+    	-ms-flex-align: start!important;
+    	align-items: start!important;
+	}
+}
+
+
+		
