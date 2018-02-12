@@ -177,9 +177,9 @@ $(document).ready(function () {
 		scrollingSpeed: 1000,
 		scrollOverflow: true,
 		afterLoad: function (anchorLink, index) {
-			console.log(inicio);
-			console.log(index);
-			console.log(scrollado);
+			//console.log(inicio);
+			//console.log(index);
+			//console.log(scrollado);
 			if (inicio === 0 && index === 1) {
 				videoIntro.play();
 				setTimeout(function () {
@@ -390,9 +390,9 @@ $(document).ready(function () {
 		});
 	$('#sec-9 input, #sec-9 textarea').on('focusin', function () {
 		$('body').addClass('form-activo').off('swipeup', swipeArriba).off('swipedown', swipeAbajo);
-		console.log(altoVentana);
+		//console.log(altoVentana);
 	}).on('focusout', function () {
 		$('body').removeClass('form-activo').on('swipeup', swipeArriba).on('swipedown', swipeAbajo);
-		console.log('Form sin focus');
+		//console.log('Form sin focus');
 	});
 }); // Final

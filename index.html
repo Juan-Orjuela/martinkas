@@ -118,7 +118,7 @@
 				</div>
 				<div class="row align-items-end full">
 
-					<div class="col-lg-5 offset-lg-7 textos">
+					<div class="col-lg-11 offset-lg-1 textos">
 						<h2>
 							<span>30 años
 								<i class="sombra"></i>
@@ -742,8 +742,12 @@
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="terminos" required>
-									<label class="custom-control-label" for="terminos">Acepta los términos y condiciones</label>
+									<label class="custom-control-label" for="terminos">Acepta los <a data-toggle="modal" data-target="#terminosModal">términos y condiciones</a></label>
+									<div class="invalid-feedback">Debes aceptar los términos y condiciones.</div>
 								</div>
+
+								
+
 								<div class="text-center">
 									<input id="submit" name="submit" class="btn btn-primary" type="submit" value="Contáctanos">
 									<div class="btn-sombra"></div>
@@ -761,26 +765,28 @@
 			<a class="creditos" href="#" data-trigger="focus" data-placement="top" data-toggle="popover" data-html="true" data-content="Diseño y desarrollo: <a href='http://www.appicua.com' target='_blank'>Appicua</a><br>Visualización y animación 3D: <a href='http://www.nisba-nisba.com' target='_blank'>Nisba Visual Label</a><br>Diseño sonoro: <a href='https://audiobitstudios.com/' target='_blank'>Audiobit Studios</a>">Créditos</a>
 		</section>
 	</div>
-	<!--<div id="footer">
-		<div class="container">
-			<div class="row footer">
-				<div class="col-sm-6 col-lg-3 offset-lg-1">
-					<p>E:
-						<a href="mailto:contacto@martinkass.com">contacto@martinkass.com</a>
-					</p>
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<p>T: (+ 57 1) 260 4004 - 260 6351</p>
-				</div>
-				<div class="col-lg-5">
-					<p>D: Av Cra 67 # 3 - 39, Bogotá D.C., Colombia.</p>
-				</div>
-			</div>
-		</div>
-	</div>-->
 	<div id="footer">
 		<p>E:<a href="mailto:contacto@martinkass.com">contacto@martinkass.com</a> <i class="bullet"></i> T: (+ 57 1) 260 4004 - 260 6351 <i class="bullet"></i> D: Av Cra 67 # 3 - 39, Bogotá D.C., Colombia.</p>
 	</div>
+	<div class="modal fade" id="terminosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Términos y condiciones</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<p>Proin sit amet pharetra tellus. Ut convallis auctor posuere. Mauris urna neque, accumsan et lacus ac, imperdiet fermentum neque. Donec libero eros, malesuada luctus suscipit nec, aliquam cursus erat. Sed placerat commodo cursus. Praesent in elit sit amet ipsum vehicula dictum. Nulla sed feugiat elit. Integer vestibulum euismod egestas.</p>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+			  
+			</div>
+		  </div>
+		</div>
+	  </div>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

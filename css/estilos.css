@@ -360,7 +360,7 @@ FOOTER
 	bottom: 0;
 	padding: 30px 0 20px;
 	padding: .9vh 0 .8vh;
-	margin: 0 0 0 1px;
+	margin: 0;
 	box-sizing: border-box;
 	background: url("../img/dark_wall.png") repeat;
 	font-size: 0.9em;
@@ -471,7 +471,7 @@ SLIDE 1
 }
 #sec-1 h2  {
 	font-size: 54px;
-	text-shadow: 2px 2px 4px  rgba(0,0,0,.5);
+	text-shadow: 2px 2px 8px  rgba(0,0,0,.5), 1px 1px 3px  rgba(0,0,0,.75);
 }
 #sec-1 .textos {
 	margin-bottom: 20vh;
@@ -995,51 +995,109 @@ SLIDE 9
     box-shadow: 0 0 0 0.2rem rgba(97, 97, 97, 0.35);
 }
 /*Terminos y condiciones*/
+#form-contacto .custom-control {
+	min-width: 90%;
+}
 #form-contacto .custom-control-label {
 	font-size: 0.875em;
+	
 }
 #form-contacto .custom-control-label::before {
     position: absolute;
-    top: .3rem;
+    top: 5px;
     left: 0;
     display: block;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 12px;
+    height: 12px;
     pointer-events: none;
     content: "";
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #dee2e6;
-}
-#form-contacto .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #007bff;
+    background-color: #fff;
+    cursor: pointer;
+    -moz-transition: background-color 200ms ease;
+    -webkit-transition: background-color 200ms ease;
+    transition: background-color 200ms ease;
 }
 #form-contacto .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
-    background-color: #007bff;
+    background-color: #e20613;
 }
-
 #form-contacto .custom-control-label::after {
     position: absolute;
-    top: .25rem;
+    top: 5px;
     left: 0;
     display: block;
-    width: 1rem;
-    height: 1rem;
+    width: 12px;
+    height: 12px;
     content: "";
+    background-image: url(../img/check.png);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 50% 50%;
+    background-size: 100%;
+    cursor: pointer;
+    
 }
-
+#form-contacto .custom-control-label a {
+	text-decoration: underline;
+	-moz-transition: color 200ms ease;
+    -webkit-transition: color 200ms ease;
+    transition: color 200ms ease;
+    cursor: pointer;
+}
+#form-contacto .custom-control-label a:hover {
+	color: #e20613;
+}
+.was-validated .custom-control-input:invalid~.invalid-feedback {
+	display: block;
+}
+#form-contacto .custom-control .invalid-feedback {
+	bottom: -11px;
+}
+#terminosModal .modal-content {
+	background: #171717 url("../img/dark_wall.png") repeat;
+	border-radius: 0;
+	border: #333333 1px solid;
+}
+#terminosModal .modal-header {
+	border-bottom: 1px solid #333333;
+}
+#terminosModal p {
+	font-size: 0.875em;
+}
+#terminosModal .modal-footer {
+	border-top: 1px solid #333333;
+}
+#terminosModal .modal-footer .btn-primary {
+	background-color: #e30514;
+	border: none;
+	border-radius: 50px;
+	text-align: center; 
+	min-width: 100px;
+	font-family: "ff-meta-serif-web-pro",serif;
+	letter-spacing: 0.01em;
+	cursor: pointer;
+}
+#terminosModal .close {
+	color: #e6e6e6;
+	text-shadow: none;
+	cursor: pointer;
+}
+#terminosModal .modal-footer .btn-primary:focus,
+#terminosModal .close:focus {
+	outline: none;
+	border: none;
+	box-shadow: none;
+}
+/**/
 #sec-9 .container {
 	z-index: 2;
 }
 #sec-9 .creditos {
 	position: absolute;
-	bottom: -3px;
+	bottom: 37px;
 	right: 10px;
 	font-size: 0.7rem;
 	background-color: #e20613;
@@ -1054,7 +1112,7 @@ SLIDE 9
 }
 #sec-9 .creditos:hover {
 	text-decoration: none;
-	bottom: 0; 
+	bottom: 35px; 
 }
 .popover {
 	background: #222 url("../img/dark_wall.png");
