@@ -35,7 +35,7 @@
 #cargando img {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 43%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -105,10 +105,10 @@
 }
 .pace {
     width: 80%;
-    max-width: 400px;
+    max-width: 700px;
     border: 0;
     background: #333;
-    top: 55%;
+    top: 58%;
     bottom: initial
 }
 .pace .pace-progress {
@@ -122,5 +122,19 @@
     right: 0;
     background: #161616;
     z-index: 1999;
+}
+#cargando p {
+    position: absolute;
+    font-family: "ff-meta-serif-web-pro",serif;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    -webkit-animation: entralogo 1000ms 1000ms forwards;
+    -moz-animation: entralogo 1000ms 1000ms forwards;
+    -o-animation: entralogo 1000ms 1000ms forwards;
+    animation: entralogo 1000ms 1000ms forwards;
 }
 

@@ -15,7 +15,7 @@ $(document).ready(function () {
 	//Cargando
 	setTimeout(function () {
 		desvanecer('#cargando, .pace-inactive', 2000);
-	}, 3000);
+	}, 5000);
 	// Controlar video
 	$('#btn-play').on('click', function (e) {
 		e.preventDefault();
@@ -45,8 +45,8 @@ $(document).ready(function () {
 		})
 			.add({
 				targets: ['#sec-' + slide + ' .mk-img', '#sec-' + slide + ' h3', '#sec-' + slide + ' h2', '#sec-' + slide + ' .txt'],
-				translateY: {
-					value: [20, 0],
+				translateX: {
+					value: [-20, 0],
 					duration: 800
 				},
 				opacity: {
@@ -116,8 +116,8 @@ $(document).ready(function () {
 		})
 			.add({
 				targets: ['#sec-9 h2', '#sec-9 .txt'],
-				translateY: {
-					value: [20, 0],
+				translateX: {
+					value: [-20, 0],
 					duration: 800
 				},
 				opacity: {
@@ -334,8 +334,8 @@ $(document).ready(function () {
 		})
 		.add({
 			targets: '#sec-1 h2',
-			translateY: {
-				value: [60, 0],
+			translateX: {
+				value: [-20, 0],
 				duration: 800
 			},
 			opacity: {
