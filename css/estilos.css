@@ -40,7 +40,7 @@ img {
 	position:fixed;
 	z-index: 1020;
 	width: 100%;
-	top: 8vh;
+	top: 5vh;
 }
 /*** MENU ***/
 #nav {
@@ -252,7 +252,7 @@ TEXTURAS
 	height: 91.5%;
 	position: absolute;
 	left: 7px;
-	top: 8.5vh
+	top: 5.5vh
 }
 .txt-lineas {
 	
@@ -359,7 +359,7 @@ FOOTER
 	/*height: 50px;*/
 	bottom: 0;
 	padding: 30px 0 20px;
-	padding: .9vh 0 .8vh;
+	padding: 12px 0 13px;
 	margin: 0;
 	box-sizing: border-box;
 	background: url("../img/dark_wall.png") repeat;
@@ -1097,11 +1097,11 @@ SLIDE 9
 }
 #sec-9 .creditos {
 	position: absolute;
-	bottom: 37px;
+	bottom: 35px;
 	right: 10px;
 	font-size: 0.7rem;
 	background-color: #e20613;
-	padding: 1px 12px 4px;
+	padding: 1px 12px 14px;
 	border-radius: 4px 4px 0 0;
 	color: #fff;
 	text-transform: uppercase;
@@ -1112,7 +1112,7 @@ SLIDE 9
 }
 #sec-9 .creditos:hover {
 	text-decoration: none;
-	bottom: 35px; 
+	bottom: 33px; 
 }
 .popover {
 	background: #222 url("../img/dark_wall.png");
@@ -1418,7 +1418,7 @@ RESPONSIVE
 		display: none;
 	}
 	#sec-7 .render {
-		margin-top: 6vh;
+		margin-top: 2vh;
 	}
 	
 	.tool-container > img {
@@ -1426,7 +1426,7 @@ RESPONSIVE
 	}
 	#sec-7 .textos {
 		margin-top: -260px;
-		margin-top: -34vh;
+		margin-top: -40vh;
 	}
 	#sec-7 .txt-puntos {
 		display: none;
@@ -1640,7 +1640,7 @@ RESPONSIVE
 		margin-bottom: 40px;/*48*/
 	}
 	h2 span .sombra {
-		top: 16px;/*33*/
+		top: 0.7em;/*33*/
 		left: 48px;
 	}
 	.bajar {
@@ -1736,6 +1736,30 @@ RESPONSIVE
 		min-height: 9vh;
 	}*/
 	
+}
+@media screen and (max-width: 660px) {
+	#footer {
+		text-align: left;
+		padding: 6px 15px;
+	}
+	#sec-9 .creditos {
+		bottom: 35px;
+	}
+	#sec-9 .creditos:hover {
+		bottom: 33px;
+	}
+	#footer p i {
+		display: none!important;
+	}
+	#footer p span {
+		display: block;
+		width: 50%;
+		float: left
+	}
+	#footer p span:last-child {
+		width: 100%;
+		clear:both;
+	}
 }
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.section .container.bg-full {
@@ -1901,23 +1925,12 @@ RESPONSIVE
 	#sec-9  .linea {
 		width: 30px;
 	}
-	#sec-9 .footer div:first-child {
-		margin-left: 0;
-		-ms-flex: 0 0 40%;
-		flex: 0 0 36%;
-		max-width: 36%;
+	
+	#sec-9 .creditos {
+		bottom: 30px;
 	}
-	#sec-9 .footer div:nth-child(2) {
-		margin-left: 0;
-		-ms-flex: 0 0 40%;
-		flex: 0 0 36%;
-		max-width: 36%;
-	}
-	#sec-9 .footer div:last-child {
-		margin-left: 0;
-		-ms-flex: 0 0 28%;
-		flex: 0 0 28%;
-		max-width: 28%;
+	#sec-9 .creditos:hover {
+		bottom: 27px;
 	}
 	.bajar a {
 		margin-top: 8px;
