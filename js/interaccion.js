@@ -10,7 +10,8 @@ $(document).ready(function () {
 		scrollado = 0,
 		videoIntro = document.getElementById("videoIntro"),
 		videoFinal = document.getElementById("videoFinal"),
-		altoVentana = $('body').height();
+		altoVentana = $('body').height(),
+		hot = $('.hot a');
 
 	//Cargando
 	setTimeout(function () {
@@ -395,4 +396,5 @@ $(document).ready(function () {
 		$('body').removeClass('form-activo').on('swipeup', swipeArriba).on('swipedown', swipeAbajo);
 		//console.log('Form sin focus');
 	});
+	//Interactividad hotspots
 }); // Final

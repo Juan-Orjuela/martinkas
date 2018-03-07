@@ -355,26 +355,26 @@
 								<img src="img/r-prueba-slide5.png" alt="prueba">
 								<div class="hot hot-1">
 									<a href="#">
-										<img src="img/hot-1.jpg" alt="Hotspot">
+										<img src="img/hot-1.jpg" srcset="img/hot-1.jpg 1x, img/hot-1@2x.jpg 2x" alt="Hotspot">
 									</a>
 									<p>
-										<span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</span>
+										<span>Punzonado para resaltar el detalle de la tecnificación y la alta calidad del metal.</span>
 									</p>
 								</div>
 								<div class="hot hot-2">
 									<a href="#">
-										<img src="img/hot-1.jpg" alt="Hotspot">
+										<img src="img/hot-2.jpg" srcset="img/hot-2.jpg 1x, img/hot-2@2x.jpg 2x" alt="Hotspot">
 									</a>
 									<p>
-										<span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</span>
+										<span>Brazo en aluminio para una estructura limpia que sostiene los entrepaños.</span>
 									</p>
 								</div>
 								<div class="hot hot-3">
 									<a href="#">
-										<img src="img/hot-1.jpg" alt="Hotspot">
+										<img src="img/hot-3.jpg" srcset="img/hot-3.jpg 1x, img/hot-3@2x.jpg 2x" alt="Hotspot">
 									</a>
 									<p>
-										<span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</span>
+										<span>Panel de doble pared para aislar la temperatura exterior y obtener mayor conservación en frío de la interna.</span>
 									</p>
 								</div>
 							</div>
@@ -621,25 +621,28 @@
 								<div class="col-lg-10 offset-lg-1">
 									<div class="carrusel-clientes">
 										<div>
-											<img src="img/cliente-1.png" alt="Cliente">
+											<img src="img/logos/hornitos.png" srcset="img/logos/hornitos@2x.png 2x, img/logos/hornitos.png 1x" alt="Hornitos">
 										</div>
 										<div>
-											<img src="img/cliente-2.png" alt="Cliente">
+											<img src="img/logos/exito.png" srcset="img/logos/exito@2x.png 2x, img/logos/exito.png 1x" alt="Éxito">
 										</div>
 										<div>
-											<img src="img/cliente-3.png" alt="Cliente">
+											<img src="img/logos/dunkin-donuts.png" srcset="img/logos/dunkin-donuts@2x.png 2x, img/logos/dunkin-donuts.png 1x" alt="Dunkin Donuts">
 										</div>
 										<div>
-											<img src="img/cliente-4.png" alt="Cliente">
+											<img src="img/logos/corral.png" srcset="img/logos/corral@2x.png 2x, img/logos/corral.png 1x" alt="El Corral">
 										</div>
 										<div>
-											<img src="img/cliente-5.png" alt="Cliente">
+											<img src="img/logos/cafe-quindio.png" srcset="img/logos/cafe-quindio@2x.png 2x, img/logos/cafe-quindio.png 1x" alt="Café Quindio">
 										</div>
 										<div>
-											<img src="img/cliente-3.png" alt="Cliente">
+											<img src="img/logos/olimpica.png" srcset="img/logos/olimpica@2x.png 2x, img/logos/olimpica.png 1x" alt="Olímpica">
 										</div>
 										<div>
-											<img src="img/cliente-4.png" alt="Cliente">
+											<img src="img/logos/compass.png" srcset="img/logos/compass@2x.png 2x, img/logos/compass.png 1x" alt="Compass Group">
+										</div>
+										<div>
+											<img src="img/logos/santa-elena.png" srcset="img/logos/santa-elena@2x.png 2x, img/logos/santa-elena.png 1x" alt="Santa Elena">
 										</div>
 									</div>
 								</div>
@@ -741,13 +744,7 @@
 									<textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Tu mensaje:" required></textarea>
 									<div class="invalid-feedback">No olvides escribir tu mensaje.</div>
 								</div>
-								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="terminos" required>
-									<label class="custom-control-label" for="terminos">Acepta los <a data-toggle="modal" data-target="#terminosModal">términos y condiciones</a></label>
-									<div class="invalid-feedback">Debes aceptar los términos y condiciones.</div>
-								</div>
-
-								
+												
 
 								<div class="text-center">
 									<input id="submit" name="submit" class="btn btn-primary" type="submit" value="Contáctanos">
@@ -773,25 +770,7 @@
 			<span>D: Av Cra 67 # 3 - 39, Bogotá D.C., Colombia.</span>
 		</p>
 	</div>
-	<div class="modal fade" id="terminosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-		  <div class="modal-content">
-			<div class="modal-header">
-			  <h5 class="modal-title" id="exampleModalLabel">Términos y condiciones</h5>
-			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			  </button>
-			</div>
-			<div class="modal-body">
-				<p>Proin sit amet pharetra tellus. Ut convallis auctor posuere. Mauris urna neque, accumsan et lacus ac, imperdiet fermentum neque. Donec libero eros, malesuada luctus suscipit nec, aliquam cursus erat. Sed placerat commodo cursus. Praesent in elit sit amet ipsum vehicula dictum. Nulla sed feugiat elit. Integer vestibulum euismod egestas.</p>
-			</div>
-			<div class="modal-footer">
-			  <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
-			  
-			</div>
-		  </div>
-		</div>
-	  </div>
+	
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

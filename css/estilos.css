@@ -615,7 +615,6 @@ SLIDE 5
 	transition: all 700ms;
 	width: 101%;
 	height: 101%;
-	
 }
 .hot a {
 	box-shadow: 0 0 0 48px rgba(255,255,255,.3);
@@ -630,15 +629,19 @@ SLIDE 5
 	background-position: center;
 	background-size: 60px;
 	transition: all 200ms;
+	height: 160px;
+	width: 160px;
 }
 .hot p {
 	width: 265px;
 	padding-bottom: 8px;
 	position: absolute;
+	line-height: 1.7;
 }
 .hot p span {
 	opacity: 0;
 	text-shadow: 1px 1px 3px #000;
+	background: rgba(0,0,0,.6);
 	
 }
 .hot p::after {
@@ -653,8 +656,7 @@ SLIDE 5
 }
 .hot a:hover,
 .hot a:focus {
-	height: 160px;
-	width: 160px;
+	
 	transform: scale(1);
 	box-shadow: 0 0 0 15px rgba(255,255,255,.3);
 	background-color: rgba(255,255,255,0);
@@ -678,8 +680,8 @@ SLIDE 5
 .hot-1 {
 	min-width: 428px;
 	min-height: 160px;
-	top:-7.4%;
-	left: -47.5%;
+	top:-11%;
+	right: 70%;
 }
 .hot-1 a {
 	right: 0;
@@ -693,11 +695,11 @@ SLIDE 5
 .hot-2 {
 	min-width: 428px;
 	min-height: 160px;
-	top:30%;
-	right: -10%;
+	top:20%;
+	right: 0;
 }
 .hot-2 a {
-	right: 0;
+	right: -3%;
 	top:0;
 }
 .hot-2 p {
@@ -708,8 +710,8 @@ SLIDE 5
 .hot-3 {
 	min-width: 428px;
 	min-height: 160px;
-	bottom:-10.8%;
-	left: 5%;
+	top:50%;
+	right: 6%;
 }
 .hot-3 a {
 	right: 0;
@@ -1461,6 +1463,20 @@ RESPONSIVE
 		left: initial!important;
 		right: 28px!important;
 	}
+	.hot-1 {
+		right: 5%;
+	}
+	.hot-1 a {
+		right: initial;
+		left: 0;
+	}
+	.hot-1 p {
+		left: 160px;
+	}
+	.hot-1 p::after {
+		right: initial;
+		left: 0px;
+	}
 }
 @media screen and (max-width: 575px) and (orientation: portrait) {
 	/*Nav*/
@@ -1571,12 +1587,54 @@ RESPONSIVE
 		
 		margin-top: 5vh;
 	}
-	/*#sec-9 .footer p {
-		margin-bottom: 4px;
-	}*/
-	
+	.hot a {
+		box-shadow: 0 0 0 35px rgba(255,255,255,.3);
+		height: 120px;
+		width: 120px;
+	}
+	.hot a:hover,
+	.hot a:focus {
+		
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(255,255,255,.3);
+	}
+	.hot p {
+		width: 190px;
+
+	}
+	.hot-1, .hot-2, .hot-3 {
+		min-width: 310px;
+	}
+	.hot-1 {
+		top: -15%;
+		right: 20%;
+	}
+	.hot-2 {
+		top: 7%;
+		right: -5%;
+	}
+	.hot-3 {
+		top: 40%;
+		right: 0%;
+	}
+	.hot-1 p {
+		left: 130px;
+	}
 }
 /*HORIZONTAL*/
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	.hot-1 {
+		top: -15%;
+	}
+	.hot-2 {
+		top: 15%;
+		right: -3%;
+	}
+	.hot-3 {
+		top: 45%;
+		right: 2%;
+	}
+}
 @media screen and (max-width: 992px) and (orientation: landscape) {
 	#logo, .txt-head {
 		top: 4vh;
@@ -1714,27 +1772,36 @@ RESPONSIVE
 		overflow: hidden;
 		width: 100px!important;
 	}
-	 /*.footer div:first-child {
-		margin-left: 0;
-		-ms-flex: 0 0 30%;
-		flex: 0 0 30%;
-		max-width: 30%;
+	
+	.hot a {
+		box-shadow: 0 0 0 35px rgba(255,255,255,.3);
+		height: 120px;
+		width: 120px;
 	}
-	 .footer div:nth-child(2) {
-		margin-left: 0;
-		-ms-flex: 0 0 30%;
-		flex: 0 0 30%;
-		max-width: 30%;
+	.hot a:hover,
+	.hot a:focus {
+		
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(255,255,255,.3);
 	}
-	 .footer div:last-child {
-		margin-left: 0;
-		-ms-flex: 0 0 60%;
-		flex: 0 0 30%;
-		max-width: 30%;
+	.hot p {
+		width: 190px;
 	}
-	 .footer {
-		min-height: 9vh;
-	}*/
+	.hot-1, .hot-2, .hot-3 {
+		min-width: 310px;
+	}
+	.hot-1 {
+		top: -15%;
+	}
+	.hot-2 {
+		top: 7%;
+		right: -5%;
+	}
+	.hot-3 {
+		top: 40%;
+		right: 0%;
+	}
+	
 	
 }
 @media screen and (max-width: 660px) {
@@ -1761,6 +1828,7 @@ RESPONSIVE
 		clear:both;
 	}
 }
+
 @media screen and (max-width: 768px) and (orientation: landscape) {
 	.section .container.bg-full {
 		background-image: url("../img/linea.png"), url("../img/linea.png");
@@ -1935,6 +2003,36 @@ RESPONSIVE
 	.bajar a {
 		margin-top: 8px;
 	}
+	.hot a {
+		box-shadow: 0 0 0 35px rgba(255,255,255,.3);
+		height: 90px;
+		width: 90px;
+		transform: scale(0.25);
+	}
+	.hot a:hover,
+	.hot a:focus {
+		
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(255,255,255,.3);
+	}
+	.hot p {
+		width: 190px;
+	}
+	.hot-1, .hot-2, .hot-3 {
+		min-width: 270px;
+	}
+	.hot-1 {
+		top: -15%;
+	}
+	.hot-2 {
+		top: 7%;
+		right: -5%;
+	}
+	.hot-3 {
+		top: 40%;
+		right: 0%;
+	}
+	
 }
 @media screen and (max-height: 400px) and (orientation: landscape) {
 	h2 {
@@ -2008,6 +2106,12 @@ RESPONSIVE
 	}
 	#sec-9 .txt {
 		margin-bottom: 2vh;
+	}
+}
+@media screen and (max-width: 520px) and (orientation: portrait) {
+	.hot-1 {
+		top: -18%;
+		right:4%;
 	}
 }
 @media screen and (orientation: portrait) {

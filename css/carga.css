@@ -103,6 +103,9 @@
     -moz-transition: width 500ms 2000ms;
     transition: width 500ms 2000ms;
 }
+.pace-done .pace {
+    
+}
 .pace {
     width: 80%;
     max-width: 700px;
