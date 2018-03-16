@@ -4,7 +4,7 @@
 		$email = $_POST['correo'];
 		$message = $_POST['mensaje'];
 		$from = 'Sitio web Martinkas'; 
-		$to = 'info@martinkas.com'; 
+		$to = 'contacto@martinkas.com.co'; 
 		$subject = 'Mensaje desde el sitio web';
 		$body = "De: $name\n E-Mail: $email\n Mensaje:\n $message";
  
