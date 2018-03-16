@@ -1093,6 +1093,15 @@ SLIDE 9
 	border: none;
 	box-shadow: none;
 }
+#msgSubmit {
+	opacity: 1;
+	-webkit-transition: opacity 200ms ease;
+	-moz-transition: opacity 200ms ease;
+	transition: opacity 200ms ease;
+}
+#msgSubmit.oculto {
+	opacity: 0;
+}
 /**/
 #sec-9 .container {
 	z-index: 2;

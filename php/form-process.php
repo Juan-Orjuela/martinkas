@@ -1,21 +1,21 @@
 <?php
-$name = $_POST["nombre"];
-$email = $_POST["correo"];
-$message = $_POST["mensaje"];
+$name = $_POST["name"];
+$email = $_POST["email"];
+$message = $_POST["message"];
  
 $EmailTo = "contacto@martinkas.com.co";
 $Subject = "Nuevo mensaje desde sitio web";
  
 // prepare email body text
-$Body .= "Name: ";
+$Body .= "Nombre: ";
 $Body .= $name;
 $Body .= "\n";
  
-$Body .= "Email: ";
+$Body .= "Correo: ";
 $Body .= $email;
 $Body .= "\n";
  
-$Body .= "Message: ";
+$Body .= "Mensaje: ";
 $Body .= $message;
 $Body .= "\n";
  
