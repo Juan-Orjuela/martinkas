@@ -1792,11 +1792,10 @@ RESPONSIVE
     }
 
     h2 span .sombra {
-        top: 0.4em;
+        top: 17px;
         /*33*/
-        left: 20px;
+        left: 60px;
         width: 80%;
-        height: 1em;
     }
 
     .bajar {
