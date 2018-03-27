@@ -177,6 +177,8 @@ $(document).ready(function () {
 		menu: '#menu',
 		scrollingSpeed: 1000,
 		scrollOverflow: true,
+		responsiveWidth: 992,
+		responsiveHeight: 800,
 		afterLoad: function (anchorLink, index) {
 			//console.log(inicio);
 			//console.log(index);

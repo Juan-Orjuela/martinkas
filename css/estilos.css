@@ -424,6 +424,7 @@ FOOTER
 
 #footer p {
     margin-bottom: 0;
+    /* font-size: 1.1rem; */
 }
 
 #footer .bullet {
@@ -526,12 +527,12 @@ SLIDE 1
 }
 
 #sec-1 h2 {
-    font-size: 54px;
+    /*font-size: 54px;*/
     text-shadow: 2px 2px 8px rgba(0,0,0,.5), 1px 1px 3px rgba(0,0,0,.75);
 }
 
 #sec-1 .textos {
-    margin-bottom: 20vh;
+    margin-bottom: 15vh;
 }
 
 #sec-1 .txt-lineas {
@@ -1077,7 +1078,14 @@ SLIDE 9
     position: absolute;
     bottom: 0
 }
-
+@keyframes baile {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 8px;
+    }
+}
 #form-contacto .btn {
     background-color: #e30514;
     border: none;
@@ -1092,6 +1100,7 @@ SLIDE 9
     cursor: pointer;
     top: 0;
     transition: top 200ms linear;
+    animation: baile 700ms linear infinite alternate;
 }
 
 .btn-sombra {
@@ -1108,13 +1117,13 @@ SLIDE 9
 }
 
 #form-contacto .btn:hover, #form-contacto .btn:focus {
-    top: 4px;
+    animation-play-state: paused;
 }
 
-#form-contacto .btn:hover + .btn-sombra, #form-contacto .btn:focus + .btn-sombra {
+/*#form-contacto .btn:hover + .btn-sombra, #form-contacto .btn:focus + .btn-sombra {
     transform: translateY(2vh) scale(0.8);
     opacity: 1;
-}
+}*/
 
 #form-contacto .btn-primary.focus, #form-contacto .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(97, 97, 97, 0.35);
@@ -1417,19 +1426,19 @@ RESPONSIVE
 /*992 a 1200*/
 @media screen and (max-width: 1200px) {
     body, html {
-        font-size:14px;
+        font-size:16px;
         /*17*/
     }
 
     h3 {
-        font-size: 12px;
+        font-size: 0.75rem;
         /*14*/
         margin-bottom: 25px;
         /*35*/
     }
 
     h2 {
-        font-size: 38px;
+        font-size: 2.375rem;
         /*48*/
         margin-bottom: 40px;
         /*48*/
@@ -1438,6 +1447,10 @@ RESPONSIVE
     h2 span .sombra {
         top: 23px;
         /*33*/
+    }
+
+    #logo img {
+        max-width: 200px;
     }
 
     #nav {
@@ -1495,408 +1508,6 @@ RESPONSIVE
     }
 }
 
-/*VERTICAL*/
-@media screen and (max-width: 992px) and (orientation: portrait) {
-    #logo img {
-        width: 190px;
-    }
-
-    .section .container.bg-full {
-        background-image: url("../img/linea.png"), url("../img/linea.png");
-        background-position: 15px 0, calc(100% - 15px) 0;
-    }
-
-    .section .container.bg-124 {
-        background-image: url("../img/linea.png"), url("../img/linea.png");
-        background-position: 15px 0, calc(100% - 15px) 0;
-    }
-
-    .txt-head {
-        display: none;
-    }
-
-    body, html {
-        font-size: 13.2px;
-        /*17*/
-    }
-
-    h3 {
-        font-size: 11px;
-        /*14*/
-        margin-bottom: 25px;
-        /*35*/
-        padding: 2px 4px;
-        display: inline-block;
-        background: rgba(0,0,0,.6);
-    }
-
-    h3 .linea {
-        width: 100%;
-        bottom: 0
-    }
-
-    h2 {
-        font-size: 36px;
-        /*48*/
-        margin-bottom: 40px;
-        /*48*/
-    }
-
-    h2 span .sombra {
-        top: 23px;
-        /*33*/
-        left: 60px;
-    }
-
-    .bajar {
-        margin: 3.5vh 0 0 60px;
-    }
-
-    .txt p {
-        max-width: 480px
-    }
-
-    /*Secciones*/
-    #sec-2 img {
-        max-height: 65vh;
-        right: 0
-    }
-
-    #sec-2 .textos {
-        margin-top: -45vh;
-    }
-
-    #sec-2 .txt-puntos {
-        right: 15px;
-        bottom: -45px;
-    }
-
-    #sec-3 .txt-puntos {
-        display: none;
-    }
-
-    #sec-3 .txt-circ {
-        display: none;
-    }
-
-    #sec-3 .col-lg-6 {
-        text-align: center;
-    }
-
-    #sec-3 .circ-mobile {
-        display: inline-block;
-        border: 1px solid #333;
-        border-radius: 100%;
-        padding: 4vh;
-    }
-
-    #sec-3 img {
-        left: 0;
-        width: 100%;
-    }
-
-    #sec-3 .render {
-        margin-top: 5vh;
-    }
-
-    #sec-3 .textos {
-        margin-top: -36vh;
-    }
-
-    #sec-4 .render {
-        margin-top: 8vh;
-    }
-
-    #sec-4 .textos {
-        margin-top: -35vh;
-    }
-
-    #sec-4 .txt-puntos {
-        right: 15px;
-        left: initial;
-        top: 0;
-    }
-
-    #sec-4 img {
-        width: 100%;
-    }
-
-    #sec-5 .render {
-        margin-top: 40px;
-        margin-top: 12vh;
-    }
-
-    #sec-5 .textos {
-        margin-top: -160px;
-        margin-top: -19vh;
-    }
-
-    #sec-6 .render {
-        margin-top: 40px;
-        margin-top: 6vh;
-    }
-
-    #sec-6 .textos {
-        margin-top: -160px;
-        margin-top: -25vh;
-    }
-
-    #sec-6 .txt-lineas {
-        left: 15px;
-        top: 45%;
-    }
-
-    #sec-6 .txt-puntos {
-        display: none;
-    }
-
-    #sec-7 .render {
-        margin-top: 2vh;
-    }
-
-    .tool-container > img {
-        max-height: 55vh;
-    }
-
-    #sec-7 .textos {
-        margin-top: -260px;
-        margin-top: -40vh;
-    }
-
-    #sec-7 .txt-puntos {
-        display: none;
-    }
-
-    #sec-8 .txt-lineas {
-        top: 6vh;
-        left: initial;
-        right: 15px;
-    }
-
-    .slick-slide {
-        text-align: center
-    }
-
-    .slick-slide img {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    #sec-9 .txt-puntos {
-        display: none;
-    }
-
-    #sec-9 h2 + .txt p {
-        padding: 0;
-    }
-
-    .popover {
-        right: 10px!important;
-        left: initial!important;
-        min-width: 255px;
-        transform: none!important;
-        top: initial!important;
-        bottom: 20px!important;
-    }
-
-    .popover .arrow {
-        left: initial!important;
-        right: 28px!important;
-    }
-
-    .hot-1 {
-        right: 5%;
-    }
-
-    .hot-1 a {
-        right: initial;
-        left: 0;
-    }
-
-    .hot-1 p {
-        left: 160px;
-    }
-
-    .hot-1 p::after {
-        right: initial;
-        left: 0px;
-    }
-}
-
-@media screen and (max-width: 575px) and (orientation: portrait) {
-    /*Nav*/ #nav {
-        right: 0
-    }
-
-    #nav a span {
-        display: none;
-    }
-
-    #nav a:after {
-        border-radius: 0;
-        border: 0;
-        box-shadow: none;
-        background: #ececec;
-        height: 2px;
-        top: 50%;
-        left: initial;
-        right: 0;
-        width: 50%;
-        transition: background 0.6s, width 0.3s;
-    }
-
-    #nav a {
-        width: 12px;
-        height: 20px;
-    }
-
-    #nav li {
-        margin-bottom: 6px;
-    }
-
-    #nav li.active a:after {
-        width: 100%;
-        box-shadow: none;
-        border: 0;
-    }
-
-    #nav ul i {
-        display: none;
-    }
-
-    /*Logo*/
-    #logo {
-        top: 3.5vh;
-    }
-
-    #logo img {
-        width: 160px;
-    }
-
-    /*Estilso tipográficos*/
-    h3 {
-        margin-bottom: 20px;
-        /*35*/
-    }
-
-    h3 .linea {
-        width: 100%;
-        bottom: 0
-    }
-
-    h2 {
-        font-size: 32px;
-        /*48*/
-        margin-bottom: 30px;
-        /*48*/
-    }
-
-    h2 span .sombra {
-        top: 17px;
-        /*33*/
-        left: 60px;
-        width: 80%;
-    }
-
-    .bajar {
-        margin: 3.5vh 0 0 60px;
-    }
-
-    /*Secciones*/
-    #sec-1 h2 {
-        font-size: 38px;
-    }
-
-    #sec-2 .txt-puntos {
-        height: 40px!important;
-        overflow: hidden;
-        bottom: -8px;
-    }
-
-    #sec-3 .txt-lineas {
-        top: 36%;
-    }
-
-    #sec-4 .txt-puntos {
-        width: 100px!important;
-        overflow: hidden;
-    }
-
-    #sec-7 .render {
-        text-align: right;
-    }
-
-    #sec-7 .tool img {
-        transform: scale(0.75);
-    }
-
-    #sec-7 .tool p::after {
-        top: 10px;
-    }
-
-    #sec-7 .tool-2 p {
-        margin: 0 0;
-        padding: 0 24px 0 0;
-        right: -2px;
-    }
-
-    #sec-7 .tool-2 p:after {
-        left: initial;
-        right: 0;
-    }
-
-    #sec-8 .txt-lineas {
-        display: none
-    }
-
-    .fila-carrusel {
-        min-height: 76px;
-    }
-
-    #sec-8 .tit-1 {
-        margin-top: 5vh;
-    }
-
-    .hot a {
-        box-shadow: 0 0 0 35px rgba(255,255,255,.3);
-        height: 120px;
-        width: 120px;
-    }
-
-    .hot a:hover, .hot a:focus {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(255,255,255,.3);
-    }
-
-    .hot p {
-        width: 190px;
-    }
-
-    .hot-1, .hot-2, .hot-3 {
-        min-width: 310px;
-    }
-
-    .hot-1 {
-        top: -15%;
-        right: 20%;
-    }
-
-    .hot-2 {
-        top: 7%;
-        right: -5%;
-    }
-
-    .hot-3 {
-        top: 40%;
-        right: 0%;
-    }
-
-    .hot-1 p {
-        left: 130px;
-    }
-}
-
-/*HORIZONTAL*/
 @media screen and (max-width: 1024px) and (orientation: landscape) {
     .hot-1 {
         top: -15%;
@@ -1913,7 +1524,13 @@ RESPONSIVE
     }
 }
 
-@media screen and (max-width: 992px) and (orientation: landscape) {
+/*
+===========
+Responsive continuo
+============
+*/
+/*HORIZONTAL*/
+@media screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
     #logo, .txt-head {
         top: 4vh;
     }
@@ -1971,12 +1588,12 @@ RESPONSIVE
 
     /*Estilos texto*/
     body, html {
-        font-size: 14px;
+        font-size: 16px;
         /*17*/
     }
 
     h3 {
-        font-size: 11px;
+        font-size: 0.875rem;
         /*14*/
         margin-bottom: 25px;
         /*35*/
@@ -1989,7 +1606,7 @@ RESPONSIVE
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 2.5rem;
         /*48*/
         margin-bottom: 40px;
         /*48*/
@@ -2003,13 +1620,12 @@ RESPONSIVE
 
     .bajar {
         width: 40px;
-        border-top: 1px solid #e20613;
+        /* border-top: 1px solid #e20613; */
         margin: 3.5vh 0 0 48px;
     }
 
     /*Secciones*/
     #sec-2 .txt-puntos {
-        overflow: hidden;
         height: 40px!important;
         bottom: -10px;
     }
@@ -2025,13 +1641,6 @@ RESPONSIVE
         overflow: hidden;
         height: 40px!important;
         bottom: -10px;
-    }
-
-    #sec-3 .textos {
-        margin-left: 2%;
-        -ms-flex: 0 0 47.666667%;
-        flex: 0 0 47.666667%;
-        max-width: 47.666667%;
     }
 
     #sec-4 .txt-puntos {
@@ -2117,39 +1726,60 @@ RESPONSIVE
         top: 40%;
         right: 0%;
     }
+
+    #footer p {
+        font-size: 1rem;
+    }
 }
 
-@media screen and (max-width: 660px) {
-    #footer {
-        text-align: left;
-        padding: 6px 6px;
+/*Acaba 992px horizontal*/
+@media screen and (max-width: 991px), (max-height: 799px) {
+    section .container {
     }
 
-    #sec-9 .creditos {
-        bottom: 35px;
-    }
-
-    #sec-9 .creditos:hover {
-        bottom: 33px;
-    }
-
-    #footer p i {
-        display: none!important;
-    }
-
-    #footer p span {
+    section .container:after {
+        content: "";
         display: block;
-        width: 50%;
-        float: left
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+        right: 15%;
+        height: 1px;
+        border-bottom: 1px dashed #333;
     }
 
-    #footer p span:last-child {
-        width: 100%;
-        clear: both;
+    #logo {
+        top: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background: url("../img/dark_wall.png") repeat;
+        border-bottom: 1px solid #333;
+    }
+
+    .fila-carrusel {
+        min-height: initial;
     }
 }
 
-@media screen and (max-width: 768px) and (orientation: landscape) {
+/*Acaba 992 x 800 Fluido*/
+@media screen and (max-width: 991px) {
+    #sec-3 .textos {
+        margin-left: 2%;
+        -ms-flex: 0 0 47.666667%;
+        flex: 0 0 47.666667%;
+        max-width: 47.666667%;
+    }
+
+    #sec-6 .textos {
+        margin-top: 10vh;
+    }
+}
+
+@media screen and (max-width: 992px) and (orientation: portrait), (max-width: 768px) {
+    .section .container {
+        padding: 60px 15px;
+    }
+
     .section .container.bg-full {
         background-image: url("../img/linea.png"), url("../img/linea.png");
         background-position: 15px 0, calc(100% - 15px) 0;
@@ -2169,7 +1799,7 @@ RESPONSIVE
     }
 
     #logo img {
-        max-width: 140px;
+        max-width: 180px;
     }
 
     /*Nav*/
@@ -2213,16 +1843,19 @@ RESPONSIVE
         display: none;
     }
 
+    .bajar {
+        margin: 3.5vh 0 0 50px;
+    }
+
     /*Estilos texto*/
     body, html {
-        font-size: 12px;
-        /*17*/
+        font-size: 16px;
     }
 
     h3 {
-        font-size: 10px;
+        font-size: 0.875rem;
         /*14*/
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
         /*35*/
         padding-left: 48px;
         /*98*/
@@ -2233,7 +1866,7 @@ RESPONSIVE
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 2rem;
         /*48*/
         margin-bottom: 20px;
         /*48*/
@@ -2247,63 +1880,132 @@ RESPONSIVE
         width: 80%;
     }
 
+    .section .container {
+        padding: 60px 15px;
+
+    }
+    #sec-1 .container {
+        
+        background: none;
+    }
+    #sec-1 .container::after {
+        display: none;
+    }
     /*Secciones*/
+    #sec-1 .textos {
+        margin-bottom: 5vh;
+    }
+
+    /*Secciones*/
+    #sec-2 img {
+        max-height: 65vh;
+        right: 0
+    }
+
+    #sec-2 .textos {
+        margin-top: -10vh;
+    }
+
+    #sec-2 .txt-puntos {
+        right: 15px;
+        bottom: -5px;
+        max-height: 40px;
+        overflow: hidden;
+    }
+
+    #sec-3 .txt-puntos {
+        left: initial;
+        right: 15px;
+        bottom: -35px;
+    }
+
     #sec-3 .txt-circ {
-        margin: 0;
-        width: 350px;
-        height: 350px
+        display: none;
+    }
+
+    #sec-3 .col-lg-6 {
+        text-align: center;
+    }
+
+    #sec-3 .circ-mobile {
+        display: inline-block;
+        border: 1px solid #333;
+        border-radius: 100%;
+        padding: 4vh;
+    }
+
+    #sec-3 img {
+        left: 0;
+        width: 100%;
+    }
+
+    #sec-3 .render {
+        margin-top: 0;
+    }
+
+    #sec-3 .textos {
+        margin-top: -5vh;
+    }
+
+    #sec-4 .render {
+        margin-top: 0;
+    }
+
+    #sec-4 .textos {
+        margin-top: -5vh;
+    }
+
+    #sec-4 .txt-puntos {
+        right: 15px;
+        left: initial;
+        top: 0;
+    }
+
+    #sec-4 img {
+        width: 100%;
+    }
+
+    #sec-5 .render {
+        margin-top: 5vh;
     }
 
     #sec-5 .textos {
-        margin-left: 0;
-        -ms-flex: 0 0 41.666667%;
-        flex: 0 0 41.666667%;
-        max-width: 41.666667%;
+        margin-top: -5vh;
     }
 
-    #sec-5 .txt-puntos {
-        overflow: hidden;
-        height: 40px!important;
+    #sec-6 .render {
+        margin-top: 0;
     }
 
-    #sec-6 .txt-puntos {
-        height: 40px!important;
-        overflow: hidden;
-        left: 60px;
+    #sec-6 .textos {
+        margin-top: -5vh;
     }
 
     #sec-6 .txt-lineas {
         left: 15px;
-        top: 40%;
+        top: 45%;
     }
 
-    #sec-6 .textos {
-        margin-top: 20vh;
-    }
-
-    #sec-7 .render {
-        text-align: center;
-    }
-
-    #sec-7 .tool img {
-        transform: scale(0.75);
-    }
-
-    #sec-7 .tool p::after {
-        top: 10px;
+    #sec-6 .txt-puntos {
+        display: none;
     }
 
     #sec-7 .render {
-        margin-left: 0;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
+        margin-top: 5vh;
     }
 
-    #sec-7 .txt-puntos {
-        height: 20px!important;
-        overflow: hidden;
-        bottom: 0;
+    .tool-container > img {
+        max-height: 55vh;
+    }
+
+    #sec-7 .textos {
+        margin-top: -10vh;
+    }
+
+    #sec-8 .txt-lineas {
+        top: 6vh;
+        left: initial;
+        right: 15px;
     }
 
     .slick-slide {
@@ -2315,195 +2017,48 @@ RESPONSIVE
         margin: 0 auto;
     }
 
-    #sec-8 .slick-prev {
-        left: -28px
-    }
-
-    #sec-8 .slick-next {
-        right: -28px
-    }
-
-    #sec-8 .txt-lineas {
-        top: 8vh;
-    }
-
-    #sec-9 .main .col-lg-3 {
+    #sec-9 .txt-puntos {
         display: none;
-    }
-
-    #sec-9 .main .col-lg-6 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    #sec-9 .col-lg-6 .textos {
-        margin-left: 5%;
-        width: 35%;
-        float: left;
-    }
-
-    #sec-9 .col-lg-6 #form-contacto {
-        margin-left: 5%;
-        width: 50%;
-        float: left;
     }
 
     #sec-9 h2 + .txt p {
-        padding-left: 48px;
-        /*98*/
+        padding: 0;
     }
 
-    #sec-9 .linea {
-        width: 30px;
+    .popover {
+        right: 10px!important;
+        left: initial!important;
+        min-width: 255px;
+        transform: none!important;
+        top: initial!important;
+        bottom: 20px!important;
     }
 
-    #sec-9 .creditos {
-        bottom: 30px;
-    }
-
-    #sec-9 .creditos:hover {
-        bottom: 27px;
-    }
-
-    .bajar a {
-        margin-top: 8px;
-    }
-
-    .hot a {
-        box-shadow: 0 0 0 35px rgba(255,255,255,.3);
-        height: 90px;
-        width: 90px;
-        transform: scale(0.25);
-    }
-
-    .hot a:hover, .hot a:focus {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(255,255,255,.3);
-    }
-
-    .hot p {
-        width: 190px;
-    }
-
-    .hot-1, .hot-2, .hot-3 {
-        min-width: 270px;
+    .popover .arrow {
+        left: initial!important;
+        right: 28px!important;
     }
 
     .hot-1 {
-        top: -15%;
+        right: 5%;
     }
 
-    .hot-2 {
-        top: 7%;
-        right: -5%;
+    .hot-1 a {
+        right: initial;
+        left: 0;
     }
 
-    .hot-3 {
-        top: 40%;
-        right: 0%;
-    }
-}
-
-@media screen and (max-height: 400px) and (orientation: landscape) {
-    h2 {
-        font-size: 20px;
-        /*48*/
-        margin-bottom: 20px;
-        /*48*/
+    .hot-1 p {
+        left: 160px;
     }
 
-    h2 span .sombra {
-        height: 14px;
-    }
-
-    #sec-2 .txt-puntos {
-        overflow: hidden;
-        height: 20px!important;
-        bottom: 10px;
-    }
-
-    #sec-3 .txt-puntos {
-        overflow: hidden;
-        height: 20px!important;
-        bottom: 0;
-    }
-
-    #sec-3 .txt-circ {
-        width: 250px;
-        height: 250px
-    }
-
-    #sec-4 .txt-puntos {
-        overflow: hidden;
-        height: 20px!important;
-        top: initial;
-        bottom: 0;
-        left: -100%;
-    }
-
-    #sec-5 .txt-puntos {
-        overflow: hidden;
-        height: 20px!important;
-    }
-
-    #sec-6 .txt-puntos {
-        display: none;
-    }
-
-    #sec-6 .textos {
-        margin-top: 8vh;
-    }
-
-    #sec-9 .footer div:first-child {
-        margin-left: 0;
-        -ms-flex: 0 0 40%;
-        flex: 0 0 36%;
-        max-width: 35%;
-    }
-
-    #sec-9 .footer div:nth-child(2) {
-        margin-left: 3%;
-        -ms-flex: 0 0 40%;
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
-
-    #sec-9 .footer div:last-child {
-        margin-left: 3%;
-        -ms-flex: 0 0 28%;
-        flex: 0 0 30%;
-        max-width: 30%;
+    .hot-1 p::after {
+        right: initial;
+        left: 0px;
     }
 }
 
-@media screen and (max-height: 580px) and (orientation: portrait) {
-    #form-contacto .form-group {
-        padding-bottom: 15px;
-        margin-bottom: 6px;
-    }
-
-    #sec-9 h2 {
-        margin-top: -2vh;
-        margin-bottom: 4vh;
-    }
-
-    #form-contacto .btn {
-        margin-top: 1vh;
-    }
-
-    #sec-9 .txt {
-        margin-bottom: 2vh;
-    }
-}
-
-@media screen and (max-width: 520px) and (orientation: portrait) {
-    .hot-1 {
-        top: -18%;
-        right: 4%;
-    }
-}
-
+/*Acaba 992 vertical y todos bajo 768*/
 @media screen and (orientation: portrait) {
     #sec-1 {
         background: url("../img/dark_wall.png") repeat;
@@ -2513,11 +2068,11 @@ RESPONSIVE
     #videoIntro {
         opacity: 1!important;
         position: absolute;
-        left: -35%;
+        left: -40%;
         right: initial;
         bottom: initial;
         top: 50%;
-        width: 180%;
+        width: 190%;
         height: auto;
         object-fit: initial;
         /*cover video background */
@@ -2552,157 +2107,206 @@ RESPONSIVE
     }
 }
 
-#sec-9 form {
-    transition: margin-top 1000ms;
+/*Acaba estilos generales vertical*/
+@media screen and (max-width: 660px) {
+    #footer {
+        padding: 6px 15px;
+    }
+
+    #sec-9 .creditos {
+        bottom: 35px;
+    }
+
+    #sec-9 .creditos:hover {
+        bottom: 33px;
+    }
+
+    #footer p span:nth-child(2) i {
+        display: none!important;
+    }
+
+    #footer p span:last-child {
+        display: block;
+        width: 100%;
+        clear: both;
+    }
+    #btn-skip {
+        bottom: 80px;
+    }
+    #sec-1 .textos {
+        margin-bottom: 10px;
+    }
+    #sec-1 .txt-lineas {
+        bottom: 0;
+    }
 }
 
-/*Móviles con teclado desplegado*/
-@media screen and (max-width: 768px) and (max-height: 400px) {
-    .form-activo #logo img {
-        max-width: 160px;
-        opacity: 0;
+@media screen and (max-width: 575px) {
+    #sec-2 img {
+        margin-top:0;
     }
 
-    .form-activo #logo {
-        top: 3.5vh
+    #sec-3 .txt-puntos {
+        max-width: 68px;
+        overflow: hidden;
     }
 
-    .form-activo #sec-9 h2 + .txt p {
-        padding: 0;
-    }
-
-    body.form-activo {
-        font-size: 14px;
-    }
-
-    .form-activo #sec-9 h2 {
-        font-size: 32px!important;
-    }
-
-    .form-activo #sec-9, .form-activo #sec-9 .container {
-        display: block;
-        height: 100vh!important;
-    }
-
-    .form-activo #sec-9 .fp-tableCell {
-        max-height: 100vh!important;
-        display: block;
-        overflow: auto;
-    }
-
-    .form-activo #sec-9 .container {
-        min-height: 480px;
-    }
-
-    .form-activo #sec-9 .col-lg-6 .textos, .form-activo #sec-9 .col-lg-6 #form-contacto {
-        margin-left: 0;
-        width: 100%;
-        float: initial;
-    }
-
-    .form-activo #form-contacto .form-group {
-        padding-bottom: 15px;
-        margin-bottom: 6px;
-    }
-
-    .form-activo #form-contacto .form-group {
-        padding-bottom: 15px;
-        margin-bottom: 6px;
-    }
-
-    .form-activo #sec-9 h2 {
-        margin-top: -2vh;
-        margin-bottom: 4vh;
-    }
-
-    .form-activo #form-contacto .btn {
-        margin-top: 1vh;
-    }
-
-    .form-activo #sec-9 .txt {
-        margin-bottom: 2vh;
-    }
-
-    .form-activo #sec-9 .align-items-center {
-        -ms-flex-align: start!important;
-        align-items: start!important;
-    }
-
-    .form-activo #sec-9 .footer > div {
-        margin-left: 0;
+    #sec-3 .textos {
+        margin-left: 2%;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
     }
-}
 
-/*Móviles pequeños*/
-@media screen and (max-height: 520px) and (orientation: portrait) {
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 1em;
+    #sec-4 .txt-puntos {
+        max-width: 68px;
+        overflow: hidden;
     }
 
-    #sec-1 .textos {
-        margin-bottom: 9vh;
-    }
-
-    #sec-2 .textos {
-        margin-top: -65vh;
-    }
-
-    #sec-3 .textos {
-        margin-top: -55vh;
-    }
-
-    #sec-3 .txt-lineas {
-        top: 5%;
-    }
-
-    #sec-4 .textos {
-        margin-top: -53vh;
-    }
-
-    #sec-4 .render {
-        margin-top: 4vh;
-    }
-
-    #sec-5 .textos {
-        z-index: 1001;
-        margin-top: -43vh;
-    }
-
-    #sec-5 .render {
-        margin-top: 1vh;
-    }
-
-    #sec-5 .render .hot {
-        display: none;
-    }
-
-    #sec-5 .textos .txt-puntos {
-        display: none;
-    }
-
-    #sec-6 .textos {
-        margin-top: -52vh;
-    }
-
-    #sec-6 .render {
+    #sec-7 .render {
         margin-top: 0;
     }
 
-    #sec-6 .txt-lineas {
-        top: 5%;
+    /*Hotspots durabilidad*/
+    .hot a {
+        box-shadow: 0 0 0 20px rgba(255,255,255,.3)
     }
 
-    #sec-7 .textos {
-        margin-top: -52vh;
+    .hot p {
+        width: 165px;
+        padding-bottom: 8px;
+        position: absolute;
+        line-height: 1.7;
     }
 
-    #sec-8 .tit-2 {
-        margin-top: 100px;
-        margin-top: 2vh;
+    .hot a:hover, .hot a:focus {
+        transform: scale(.8);
+        box-shadow: 0 0 0 10px rgba(255,255,255,.3);
+        background-color: rgba(255,255,255,0);
+        background-image: none;
     }
-   
+
+    .hot-1 {
+        min-width: initial;
+        width: 325px;
+        min-height: 160px;
+        top: -15%;
+        right: initial;
+    }
+
+    .hot-2 {
+        min-width: initial;
+        width: 325px;
+        min-height: 160px;
+    }
+
+    .hot-3 {
+        min-width: initial;
+        width: 375px;
+        min-height: 160px;
+    }
+
+    .hot-3 p {
+        width: 215px;
+    }
+}
+@media screen and (max-width: 660px) {
+    #fullpage {
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 480px) {
+    h2 span .sombra {
+        max-width: 80%;
+    }
+
+    h3 {
+        font-size: 0.8rem;
+    }
+
+    #sec-9 .creditos {
+        bottom: 60px;
+    }
+
+    #sec-9 .creditos:hover {
+        bottom: 57px;
+    }
+
+    #footer p span i {
+        display: none!important;
+    }
+
+    #footer p span {
+        display: block;
+        text-align: left;
+    }
+
+    #sec-9 .container {
+        padding-bottom: 100px;
+    }
+
+    .tool p {
+        font-size: 0.8rem;
+    }
+
+    /*Hotspots*/
+    .hot a {
+        box-shadow: 0 0 0 20px rgba(255,255,255,.3);
+        width: 100px;
+        height: 100px;
+    }
+
+    .hot p {
+        width: 145px;
+        font-size: 0.8rem;
+    }
+
+    .hot a:hover, .hot a:focus {
+        transform: scale(.8);
+        box-shadow: 0 0 0 10px rgba(255,255,255,.3);
+        background-color: rgba(255,255,255,0);
+        background-image: none;
+    }
+
+    .hot-1 {
+        width: 250px;
+        min-height: 100px;
+        top: -16%;
+        left: -5%;
+    }
+
+    .hot-1 p {
+        left: initial;
+        right: 0;
+    }
+
+    .hot-2 {
+        min-width: initial;
+        width: 250px;
+        min-height: 100px;
+    }
+
+    .hot-3 {
+        min-width: initial;
+        width: 250px;
+        min-height: 100px;
+    }
+
+    .hot-3 p {
+        width: 145px;
+        top: -50%
+    }
+}
+
+@media screen and (max-height: 768px) {
+    .tool-container > img {
+        max-height: initial;
+        height: 420px;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 600px) {
+    #videoIntro {
+        top: 40%;
+    }
 }
