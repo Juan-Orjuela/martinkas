@@ -2026,12 +2026,12 @@ Responsive continuo
     }
 
     .popover {
-        right: 10px!important;
+        /*right: 10px!important;
         left: initial!important;
         min-width: 255px;
-        transform: none!important;
+         transform: none!important; 
         top: initial!important;
-        bottom: 20px!important;
+        bottom: 20px!important;*/
     }
 
     .popover .arrow {

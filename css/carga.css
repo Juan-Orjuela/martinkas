@@ -162,3 +162,13 @@
         top: calc(50% - 40px);
     }
 }
+.fp-viewing-s2 .pace,
+.fp-viewing-s3 .pace,
+.fp-viewing-s4 .pace,
+.fp-viewing-s5 .pace,
+.fp-viewing-s6 .pace,
+.fp-viewing-s7 .pace,
+.fp-viewing-s8 .pace,
+.fp-viewing-s9 .pace {
+    display:none!important;
+}

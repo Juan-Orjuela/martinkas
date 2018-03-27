@@ -11,7 +11,7 @@ $(document).ready(function () {
 		videoIntro = document.getElementById("videoIntro"),
 		videoFinal = document.getElementById("videoFinal"),
 		altoVentana = $('body').height(),
-		hot = $('.hot a');
+		btns = $('.hot a, .tool a, .creditos');
 
 	//Cargando
 	setTimeout(function () {
@@ -232,7 +232,7 @@ $(document).ready(function () {
 	});
 
 	//Swipe en moviles
-	function swipeArriba() {
+	/*function swipeArriba() {
 		$.fn.fullpage.moveSectionDown();
 	}
 	function swipeAbajo() {
@@ -240,7 +240,7 @@ $(document).ready(function () {
 	}
 	$('body').on('swipeup', swipeArriba);
 	$('body').on('swipedown', swipeAbajo);
-
+	*/
 	//Carrusel 	
 	$('.carrusel-clientes').slick({
 		infinite: true,
@@ -391,12 +391,15 @@ $(document).ready(function () {
 			easing: 'linear',
 			offset: '-=4000'
 		});
-	$('#sec-9 input, #sec-9 textarea').on('focusin', function () {
+	/*$('#sec-9 input, #sec-9 textarea').on('focusin', function () {
 		$('body').addClass('form-activo').off('swipeup', swipeArriba).off('swipedown', swipeAbajo);
-		//console.log(altoVentana);
+		
 	}).on('focusout', function () {
 		$('body').removeClass('form-activo').on('swipeup', swipeArriba).on('swipedown', swipeAbajo);
-		//console.log('Form sin focus');
-	});
+		
+	});*/
 	//Interactividad hotspots
+	btns.on("click", function (e){
+		e.preventDefault();
+	})
 }); // Final
