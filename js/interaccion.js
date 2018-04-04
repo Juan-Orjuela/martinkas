@@ -56,7 +56,6 @@ $(document).ready(function () {
 				},
 				easing: 'linear',
 				delay: function (el, i) {
-					//console.log(i + "es el el: " + el + "lenght es: " + l );
 					return 1000 + (i * 200);
 				},
 				offset: '-=2000'
@@ -73,7 +72,6 @@ $(document).ready(function () {
 					}
 				},
 				delay: function (el, i, l) {
-					//console.log(i + "es el el: " + el + "lenght es: " + l);
 					return (i * 200);
 				},
 				offset: '-=1000'
@@ -127,7 +125,6 @@ $(document).ready(function () {
 				},
 				easing: 'linear',
 				delay: function (el, i) {
-					//console.log(i + "es el el: " + el + "lenght es: " + l );
 					return 1000 + (i * 200);
 				},
 				offset: '-=2000'
@@ -172,7 +169,6 @@ $(document).ready(function () {
 
 	//Fullpage ========
 	$('#fullpage').fullpage({
-		///sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
 		anchors: ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9'],
 		menu: '#menu',
 		scrollingSpeed: 1000,
@@ -180,9 +176,6 @@ $(document).ready(function () {
 		responsiveWidth: 992,
 		responsiveHeight: 800,
 		afterLoad: function (anchorLink, index) {
-			//console.log(inicio);
-			//console.log(index);
-			//console.log(scrollado);
 			if (inicio === 0 && index === 1) {
 				videoIntro.play();
 				setTimeout(function () {
@@ -231,16 +224,6 @@ $(document).ready(function () {
 		}
 	});
 
-	//Swipe en moviles
-	/*function swipeArriba() {
-		$.fn.fullpage.moveSectionDown();
-	}
-	function swipeAbajo() {
-		$.fn.fullpage.moveSectionUp();
-	}
-	$('body').on('swipeup', swipeArriba);
-	$('body').on('swipedown', swipeAbajo);
-	*/
 	//Carrusel 	
 	$('.carrusel-clientes').slick({
 		infinite: true,
@@ -251,7 +234,7 @@ $(document).ready(function () {
 		responsive: [{
 			breakpoint: 768,
 			settings: {
-				slidesToShow: 4,
+				slidesToShow: 3,
 				slidesToScroll: 1
 			}
 		}]
@@ -391,13 +374,6 @@ $(document).ready(function () {
 			easing: 'linear',
 			offset: '-=4000'
 		});
-	/*$('#sec-9 input, #sec-9 textarea').on('focusin', function () {
-		$('body').addClass('form-activo').off('swipeup', swipeArriba).off('swipedown', swipeAbajo);
-		
-	}).on('focusout', function () {
-		$('body').removeClass('form-activo').on('swipeup', swipeArriba).on('swipedown', swipeAbajo);
-		
-	});*/
 	//Interactividad hotspots
 	btns.on("click", function (e){
 		e.preventDefault();

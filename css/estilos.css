@@ -2025,15 +2025,6 @@ Responsive continuo
         padding: 0;
     }
 
-    .popover {
-        /*right: 10px!important;
-        left: initial!important;
-        min-width: 255px;
-         transform: none!important; 
-        top: initial!important;
-        bottom: 20px!important;*/
-    }
-
     .popover .arrow {
         left: initial!important;
         right: 28px!important;
@@ -2138,6 +2129,9 @@ Responsive continuo
     }
     #sec-1 .txt-lineas {
         bottom: 0;
+    }
+    #sec-8 h2 {
+        font-size: 1.6rem;
     }
 }
 
@@ -2295,6 +2289,10 @@ Responsive continuo
     .hot-3 p {
         width: 145px;
         top: -50%
+    }
+
+    #sec-8 h2 {
+        font-size: 1.4rem;
     }
 }
 
