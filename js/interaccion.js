@@ -230,7 +230,7 @@ $(document).ready(function () {
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 4000,
+		autoplaySpeed: 2800,
 		responsive: [{
 			breakpoint: 768,
 			settings: {

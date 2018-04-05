@@ -470,7 +470,7 @@ SLIDE 1
 }
 
 #videoFinal {
-    background-image: url('../img/r-prueba-4.png');
+    background-image: url('../img/video-final.jpg');
 }
 
 .videoFinal {
@@ -1307,7 +1307,9 @@ SLIDE 9
     border-top-color: #333;
     border-width: .4rem;
 }
-
+.mk-requeridos {
+    font-size: .875rem;
+}
 .popover .arrow:before {
     display: none;
 }
@@ -2306,5 +2308,10 @@ Responsive continuo
 @media screen and (orientation: portrait) and (max-height: 600px) {
     #videoIntro {
         top: 40%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    #sec-9 .videoFinal {
+        display: none;
     }
 }
