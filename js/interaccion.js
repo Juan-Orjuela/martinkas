@@ -200,7 +200,7 @@ $(document).ready(function () {
 						desvanecer('.videoFinal', 1200);
 						final++;
 					}
-				}, 500);
+				}, 1000);
 				videoFinal.onended = function () {
 					animarSlide9();
 					desvanecer('.videoFinal', 1200);
@@ -230,7 +230,7 @@ $(document).ready(function () {
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 2800,
+		autoplaySpeed: 2000,
 		responsive: [{
 			breakpoint: 768,
 			settings: {
