@@ -1008,7 +1008,9 @@ SLIDE 8
 #sec-8 .container > .row > div {
     margin-top: 11vh;
 }
-
+#sec-8 h2 {
+        font-size: 2.05rem;
+    }
 .fila-carrusel {
     min-height: 162px;
 }

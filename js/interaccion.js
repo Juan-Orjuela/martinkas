@@ -213,7 +213,7 @@ $(document).ready(function () {
 			} else {
 				console.log("Algo malo está pasando");
 			}
-			
+
 			if (scrollado === 0 && index !== 1) {
 				$('#logo').css('opacity', 1);
 				$('#menu li').css('opacity', 1);
@@ -230,14 +230,22 @@ $(document).ready(function () {
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 2000,
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1
+		autoplaySpeed: 1000,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			}, {
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
 			}
-		}]
+		]
 	});
 
 	//Bajar con flechas
@@ -375,7 +383,17 @@ $(document).ready(function () {
 			offset: '-=4000'
 		});
 	//Interactividad hotspots
-	btns.on("click", function (e){
+	btns.on("click", function (e) {
 		e.preventDefault();
 	})
+	//Cambiar poster 
+	$(window).resize(function(){
+
+		if ($(window).width() >= 1024) {  
+ 
+			   $('#videoFinal').attr('poster', 'img/video-final-esc.jpg');
+ 
+		}     
+ 
+ });
 }); // Final
